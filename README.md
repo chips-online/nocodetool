@@ -145,10 +145,20 @@ npm start
 
 ### 1. Supabase プロジェクトを作成
 
-1. [Supabase](https://supabase.com/) で新規プロジェクトを作成
-2. Project Settings → API で次を控える
-   - Project URL
-   - `anon` public key
+1. ブラウザで [Supabase](https://supabase.com/) を開き、アカウント登録またはログインします。  
+2. ダッシュボードで **New project** をクリックします。  
+3. 画面の入力欄を次のように埋めます。  
+   - **Organization**: 既定のままでOK  
+   - **Name**: 任意（例: `nocode-lp-tool`）  
+   - **Database Password**: 自分で決めた強いパスワード（忘れないようメモ）  
+   - **Region**: 日本から使うなら近いリージョンを選択  
+4. **Create new project** を押して、作成完了まで待ちます（1〜2分程度）。  
+5. プロジェクト作成後、左メニューの **Project Settings** → **API** を開きます。  
+6. 次の2つをコピーして控えます（あとで `.env` と Vercel に設定します）。  
+   - **Project URL**（`SUPABASE_URL` に使う）  
+   - **Project API keys** の **anon public**（`SUPABASE_ANON_KEY` に使う）  
+
+> 注意: `service_role` キーは強力な管理者キーです。このアプリでは使いません。
 
 ### 2. テーブル作成（`pages`）
 

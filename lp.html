@@ -34,6 +34,7 @@
       var titleEl = document.getElementById("lp-outer-title");
       var REGISTRY_KEY = "lp_pages_registry_v1";
       var FALLBACK_TITLE = "公開LP";
+      var UUID_V4_LIKE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
       function showError(message) {
         err.hidden = false;
@@ -85,8 +86,33 @@
         return result.data;
       }
 
+      function findLocalPage(pageId) {
+        try {
+          var raw = localStorage.getItem(REGISTRY_KEY);
+          var reg = raw ? JSON.parse(raw) : { pages: [] };
+          var pages = reg && Array.isArray(reg.pages) ? reg.pages : [];
+          for (var i = 0; i < pages.length; i++) {
+            if (pages[i] && pages[i].id === pageId) return pages[i];
+          }
+        } catch (e) {}
+        return null;
+      }
+
       if (!id) {
         showError("公開するページを指定してください（URL に ?id= ）。");
+        return;
+      }
+
+      // 旧ローカルID（p_xxx や migrated_xxx）は Supabase UUID ではないため、
+      // 同一ブラウザにデータがある場合のみローカル描画にフォールバックする。
+      if (!UUID_V4_LIKE.test(id)) {
+        var localPage = findLocalPage(id);
+        if (!localPage || !localPage.document) {
+          showError("この公開URLは旧形式IDのため、現在の環境では表示できません。エディタで「サーバーに保存」して新しいURL（/view?id=UUID）を発行してください。");
+          return;
+        }
+        if (titleEl) titleEl.textContent = localPage.title || FALLBACK_TITLE;
+        iframe.src = "index.html?published=1&page=" + encodeURIComponent(id);
         return;
       }
 
