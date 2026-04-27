@@ -1,0 +1,932 @@
+{
+  "name": "カフェ",
+  "canvas": {
+    "widthPx": 400,
+    "floorHeightPx": 400,
+    "backgroundColor": "#f5f0e8",
+    "backgroundImageSrc": "",
+    "backgroundImageFit": "cover"
+  },
+  "data": [
+    {
+      "id": "cafe-m-hero",
+      "type": "container",
+      "x": 0,
+      "y": 0,
+      "zIndex": 1,
+      "style": {
+        "minWidth": "1200px",
+        "minHeight": "650px",
+        "width": "1200px",
+        "height": "1000px",
+        "padding": "20px",
+        "borderRadius": "0px",
+        "minWidthPx": 1200,
+        "minHeightPx": 650,
+        "widthPx": 1200,
+        "heightPx": 1000,
+        "paddingPx": 20,
+        "backgroundColor": "#efe6dc",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "cafe-m-hero-img",
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=82",
+          "width": "1200px",
+          "heightPx": 0
+        },
+        {
+          "id": "cafe-m-hero-t1",
+          "type": "text",
+          "x": 0,
+          "y": 500,
+          "zIndex": 2,
+          "text": "Fresh Coffee, Good Time",
+          "style": {
+            "color": "#6b5a48",
+            "fontWeight": "400",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "22px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "cafe-m-hero-t2",
+          "type": "text",
+          "x": 0,
+          "y": 490,
+          "zIndex": 2,
+          "text": "落ち着いた時間を<br>あなたに。",
+          "style": {
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "35px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.35,
+            "textFormat": "html"
+          }
+        },
+        {
+          "id": "cafe-m-hero-t3",
+          "type": "text",
+          "x": 0,
+          "y": 492,
+          "zIndex": 2,
+          "text": "自家焙煎のスペシャルティコーヒーと、季節のスイーツ。木の温もりに包まれた空間で、日常を少し離れたひとときをお過ごしください。",
+          "style": {
+            "color": "#5c4a3a",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "17px",
+            "width": "1000px",
+            "heightPx": 0,
+            "lineHeight": 1.65
+          }
+        },
+        {
+          "id": "cafe-m-hero-btn",
+          "type": "button",
+          "x": 0,
+          "y": 537,
+          "zIndex": 3,
+          "label": "メニューを見る",
+          "style": {
+            "color": "#ffffff",
+            "backgroundColor": "#6b5344",
+            "backgroundColorSolid": "#6b5344",
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 32,
+            "borderWidthPx": 0,
+            "borderColor": "#1e293b",
+            "backgroundImageSrc": "",
+            "backgroundImageFit": "cover",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "blockAlign": "center",
+            "fontSize": "16px",
+            "width": "280px",
+            "heightPx": 0,
+            "borderRadius": "999px",
+            "lineHeight": 1.45
+          }
+        }
+      ]
+    },
+    {
+      "id": "cafe-m-menu",
+      "type": "container",
+      "x": 0,
+      "y": 655,
+      "zIndex": 2,
+      "style": {
+        "minWidth": "1200px",
+        "minHeight": "",
+        "width": "1200px",
+        "height": "1680px",
+        "padding": "20px",
+        "borderRadius": "0px",
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 1680,
+        "paddingPx": 20,
+        "backgroundColor": "#faf7f2",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "cafe-m-menu-h1",
+          "type": "text",
+          "x": 0,
+          "y": 52,
+          "zIndex": 1,
+          "text": "MENU",
+          "style": {
+            "color": "#8a7a68",
+            "fontWeight": "600",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "13px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.35em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "cafe-m-menu-h2",
+          "type": "text",
+          "x": 0,
+          "y": 88,
+          "zIndex": 1,
+          "text": "季節の味わいをご紹介",
+          "style": {
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "28px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "cafe-m-menu-h3",
+          "type": "text",
+          "x": 0,
+          "y": 132,
+          "zIndex": 1,
+          "text": "Taste the season",
+          "style": {
+            "color": "#9a8a78",
+            "fontWeight": "400",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "14px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "id": "cafe-m-menu-card-a",
+          "type": "container",
+          "x": 0,
+          "y": 188,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "352px",
+            "minHeight": "380px",
+            "width": "352px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 352,
+            "minHeightPx": 380,
+            "widthPx": 352,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "cafe-m-menu-a-img",
+              "type": "image",
+              "x": 0,
+              "y": 0,
+              "zIndex": 2,
+              "src": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=82",
+              "width": "352px",
+              "height": "220px"
+            },
+            {
+              "id": "cafe-m-menu-a-t1",
+              "type": "text",
+              "x": 0,
+              "y": 236,
+              "zIndex": 3,
+              "text": "スペシャルティコーヒー",
+              "style": {
+                "color": "#3d2e24",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "28px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.45
+              }
+            },
+            {
+              "id": "cafe-m-menu-a-t2",
+              "type": "text",
+              "x": 0,
+              "y": 288,
+              "zIndex": 4,
+              "text": "エチオピア・グアテマラなど、豆の個性を引き出す浅煎りから深煎りまで。エスプレッソ・ドリップ・カフェラテをご用意しています。",
+              "style": {
+                "color": "#5c4a3a",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "15px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.55
+              }
+            }
+          ]
+        },
+        {
+          "id": "cafe-m-menu-card-b",
+          "type": "container",
+          "x": 0,
+          "y": 188,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "352px",
+            "minHeight": "380px",
+            "width": "352px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 352,
+            "minHeightPx": 380,
+            "widthPx": 352,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "cafe-m-menu-b-img",
+              "type": "image",
+              "x": 0,
+              "y": 0,
+              "zIndex": 2,
+              "src": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=82",
+              "width": "352px",
+              "height": "220px"
+            },
+            {
+              "id": "cafe-m-menu-b-t1",
+              "type": "text",
+              "x": 0,
+              "y": 236,
+              "zIndex": 3,
+              "text": "季節のケーキ＆スイーツ",
+              "style": {
+                "color": "#3d2e24",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "28px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.45
+              }
+            },
+            {
+              "id": "cafe-m-menu-b-t2",
+              "type": "text",
+              "x": 0,
+              "y": 288,
+              "zIndex": 4,
+              "text": "パティシエ特製のタルトやチーズケーキ。季節のフルーツを使った限定メニューもお楽しみください。",
+              "style": {
+                "color": "#5c4a3a",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "15px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.55
+              }
+            }
+          ]
+        },
+        {
+          "id": "cafe-m-menu-card-c",
+          "type": "container",
+          "x": 0,
+          "y": 188,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "352px",
+            "minHeight": "380px",
+            "width": "352px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 352,
+            "minHeightPx": 380,
+            "widthPx": 352,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "cafe-m-menu-c-img",
+              "type": "image",
+              "x": 0,
+              "y": 0,
+              "zIndex": 2,
+              "src": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=82",
+              "width": "352px",
+              "height": "220px"
+            },
+            {
+              "id": "cafe-m-menu-c-t1",
+              "type": "text",
+              "x": 0,
+              "y": 236,
+              "zIndex": 3,
+              "text": "サンドイッチ・軽食",
+              "style": {
+                "color": "#3d2e24",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "28px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.45
+              }
+            },
+            {
+              "id": "cafe-m-menu-c-t2",
+              "type": "text",
+              "x": 0,
+              "y": 288,
+              "zIndex": 4,
+              "text": "モーニング・ランチにぴったりのホットサンドやキッシュ。テイクアウトも承ります。",
+              "style": {
+                "color": "#5c4a3a",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "15px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.55
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-m-story",
+      "type": "container",
+      "x": 0,
+      "y": 2329,
+      "zIndex": 3,
+      "style": {
+        "minWidth": "1200px",
+        "minHeight": "",
+        "width": "1200px",
+        "height": "720px",
+        "padding": "20px",
+        "borderRadius": "0px",
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 720,
+        "paddingPx": 20,
+        "backgroundColor": "#f0e8df",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "cafe-m-story-h1",
+          "type": "text",
+          "x": 0,
+          "y": 52,
+          "zIndex": 1,
+          "text": "STORY",
+          "style": {
+            "color": "#8a7a68",
+            "fontWeight": "600",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.35em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "cafe-m-story-h2",
+          "type": "text",
+          "x": 0,
+          "y": 84,
+          "zIndex": 1,
+          "text": "カフェのこだわり",
+          "style": {
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "30px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.3
+          }
+        },
+        {
+          "id": "cafe-m-story-h3",
+          "type": "text",
+          "x": 0,
+          "y": 128,
+          "zIndex": 1,
+          "text": "From bean to cup",
+          "style": {
+            "color": "#9a8a78",
+            "fontWeight": "400",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "14px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "id": "cafe-m-story-body",
+          "type": "container",
+          "x": 0,
+          "y": 176,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "1056px",
+            "minHeight": "400px",
+            "width": "1056px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1056,
+            "minHeightPx": 400,
+            "widthPx": 1056,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "cafe-m-story-imgbox",
+              "type": "container",
+              "x": 0,
+              "y": 0,
+              "zIndex": 1,
+              "style": {
+                "minWidth": "520px",
+                "minHeight": "340px",
+                "width": "520px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 520,
+                "minHeightPx": 340,
+                "widthPx": 520,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "cafe-m-story-img",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "src": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1000&q=82",
+                  "width": "520px",
+                  "height": "340px"
+                }
+              ]
+            },
+            {
+              "id": "cafe-m-story-tbox",
+              "type": "container",
+              "x": 0,
+              "y": 0,
+              "zIndex": 1,
+              "style": {
+                "minWidth": "488px",
+                "minHeight": "220px",
+                "width": "488px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 488,
+                "minHeightPx": 220,
+                "widthPx": 488,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "cafe-m-story-p1",
+                  "type": "text",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 3,
+                  "text": "厳選したスペシャルティ豆は、週に数回、店内の小型焙煎機で焙煎。鮮度の高い豆だけを豆の状態で保管し、ご注文後に挽きたてで抽出します。苦みと酸味のバランス、香りの立ち上がりまで、一杯ごとに丁寧に調整しています。",
+                  "style": {
+                    "color": "#4a3f36",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "17px",
+                    "width": "488px",
+                    "heightPx": 0,
+                    "lineHeight": 1.65
+                  }
+                },
+                {
+                  "id": "cafe-m-story-p2",
+                  "type": "text",
+                  "x": 0,
+                  "y": 120,
+                  "zIndex": 3,
+                  "text": "店内は無垢材と間接照明で、長居したくなる落ち着きの空間に。コンセント席・カウンター席をご用意し、おひとり様もグループもゆったりとお過ごしいただけます。",
+                  "style": {
+                    "color": "#5c4a3a",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "16px",
+                    "width": "488px",
+                    "heightPx": 0,
+                    "lineHeight": 1.55
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-m-gallery",
+      "type": "container",
+      "x": 0,
+      "y": 3054,
+      "zIndex": 4,
+      "style": {
+        "minWidth": "1200px",
+        "minHeight": "",
+        "width": "1200px",
+        "height": "560px",
+        "padding": "20px",
+        "borderRadius": "0px",
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 560,
+        "paddingPx": 20,
+        "backgroundColor": "#ffffff",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "cafe-m-gal-h1",
+          "type": "text",
+          "x": 0,
+          "y": 48,
+          "zIndex": 1,
+          "text": "GALLERY",
+          "style": {
+            "color": "#8a7a68",
+            "fontWeight": "600",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "13px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.35em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "cafe-m-gal-h2",
+          "type": "text",
+          "x": 0,
+          "y": 84,
+          "zIndex": 1,
+          "text": "店内の雰囲気",
+          "style": {
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "28px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "cafe-m-gal-h3",
+          "type": "text",
+          "x": 0,
+          "y": 124,
+          "zIndex": 1,
+          "text": "A quiet moment",
+          "style": {
+            "color": "#9a8a78",
+            "fontWeight": "400",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "14px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "id": "cafe-m-gal-i1",
+          "type": "image",
+          "x": 0,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=82",
+          "width": "352px",
+          "height": "220px"
+        },
+        {
+          "id": "cafe-m-gal-i2",
+          "type": "image",
+          "x": 0,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=82",
+          "width": "352px",
+          "height": "220px"
+        },
+        {
+          "id": "cafe-m-gal-i3",
+          "type": "image",
+          "x": 0,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=82",
+          "width": "352px",
+          "height": "220px"
+        }
+      ]
+    },
+    {
+      "id": "cafe-m-visit",
+      "type": "container",
+      "x": 0,
+      "y": 4269,
+      "zIndex": 5,
+      "style": {
+        "minWidth": "1200px",
+        "minHeight": "",
+        "width": "1200px",
+        "height": "420px",
+        "padding": "20px",
+        "borderRadius": "0px",
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 420,
+        "paddingPx": 20,
+        "backgroundColor": "#d4c4b0",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "cafe-m-vis-h1",
+          "type": "text",
+          "x": 0,
+          "y": 48,
+          "zIndex": 1,
+          "text": "VISIT",
+          "style": {
+            "color": "#5c4a3a",
+            "fontWeight": "600",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "960px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.35em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "cafe-m-vis-h2",
+          "type": "text",
+          "x": 0,
+          "y": 80,
+          "zIndex": 1,
+          "text": "ご来店・ご予約はお気軽に",
+          "style": {
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "26px",
+            "width": "960px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "cafe-m-vis-h3",
+          "type": "text",
+          "x": 0,
+          "y": 124,
+          "zIndex": 1,
+          "text": "We are here for you",
+          "style": {
+            "color": "#6b5a48",
+            "fontWeight": "400",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "15px",
+            "width": "960px",
+            "heightPx": 0,
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "id": "cafe-m-vis-b1",
+          "type": "button",
+          "x": 0,
+          "y": 188,
+          "zIndex": 2,
+          "label": "席の予約をする",
+          "style": {
+            "color": "#ffffff",
+            "backgroundColor": "#6b5344",
+            "backgroundColorSolid": "#6b5344",
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 28,
+            "borderWidthPx": 0,
+            "borderColor": "#1e293b",
+            "backgroundImageSrc": "",
+            "backgroundImageFit": "cover",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "blockAlign": "center",
+            "fontSize": "16px",
+            "width": "300px",
+            "heightPx": 0,
+            "borderRadius": "999px",
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "id": "cafe-m-vis-b2",
+          "type": "button",
+          "x": 0,
+          "y": 233,
+          "zIndex": 2,
+          "label": "アクセスを見る",
+          "style": {
+            "color": "#3d2e24",
+            "backgroundColor": "#faf7f2",
+            "backgroundColorSolid": "#faf7f2",
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 28,
+            "borderWidthPx": 1,
+            "borderColor": "#6b5344",
+            "backgroundImageSrc": "",
+            "backgroundImageFit": "cover",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "blockAlign": "center",
+            "fontSize": "16px",
+            "width": "300px",
+            "heightPx": 0,
+            "borderRadius": "999px",
+            "lineHeight": 1.45
+          }
+        }
+      ]
+    },
+    {
+      "id": "cafe-m-foot",
+      "type": "container",
+      "x": 0,
+      "y": 4550,
+      "zIndex": 6,
+      "style": {
+        "minWidth": "1200px",
+        "minHeight": "",
+        "width": "1200px",
+        "height": "160px",
+        "padding": "20px",
+        "borderRadius": "0px",
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 160,
+        "paddingPx": 20,
+        "backgroundColor": "#3a3229",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "cafe-m-foot-t1",
+          "type": "text",
+          "x": 0,
+          "y": 44,
+          "zIndex": 1,
+          "text": "Café Bloom",
+          "style": {
+            "color": "#efe6dc",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "20px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "id": "cafe-m-foot-t2",
+          "type": "text",
+          "x": 0,
+          "y": 80,
+          "zIndex": 1,
+          "text": "〒150-0001 東京都渋谷区〇〇 1-15-8 ／ 10:00–19:00（L.O. 18:30）／ 不定休",
+          "style": {
+            "color": "#d4c9bc",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "14px",
+            "width": "1056px",
+            "heightPx": 0,
+            "lineHeight": 1.5
+          }
+        }
+      ]
+    }
+  ]
+}

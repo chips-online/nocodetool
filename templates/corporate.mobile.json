@@ -1,0 +1,802 @@
+{
+  "name": "コーポレートLP",
+  "canvas": {
+    "widthPx": 400,
+    "floorHeightPx": 3428,
+    "backgroundColor": "#f6f8fb",
+    "backgroundImageSrc": "",
+    "backgroundImageFit": "cover"
+  },
+  "data": [
+    {
+      "id": "corp-m-hero",
+      "type": "container",
+      "x": 0,
+      "y": 0,
+      "zIndex": 1,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "620px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 620,
+        "paddingPx": 0,
+        "backgroundColor": "#0f1b2d",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "corp-m-hero-img",
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=82",
+          "width": "400px",
+          "widthPx": 400,
+          "height": "266px",
+          "heightPx": 266
+        },
+        {
+          "id": "corp-m-hero-kicker",
+          "type": "text",
+          "x": 20,
+          "y": 280,
+          "zIndex": 2,
+          "text": "CORPORATE IDENTITY",
+          "style": {
+            "color": "#d7e3f8",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.45,
+            "letterSpacing": "0.26em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "corp-m-hero-title",
+          "type": "text",
+          "x": 20,
+          "y": 312,
+          "zIndex": 2,
+          "text": "Build Trust, Create Future",
+          "style": {
+            "color": "#ffffff",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "26px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.25
+          }
+        },
+        {
+          "id": "corp-m-hero-lead",
+          "type": "text",
+          "x": 20,
+          "y": 388,
+          "zIndex": 2,
+          "text": "信頼を基盤に、社会と企業の未来を共創する。",
+          "style": {
+            "color": "#eef4ff",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "18px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "id": "corp-m-hero-body",
+          "type": "text",
+          "x": 20,
+          "y": 448,
+          "zIndex": 2,
+          "text": "テクノロジーと誠実なパートナーシップで、企業課題を解決し、持続可能な成長を支援します。",
+          "style": {
+            "color": "#dbe7fa",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "15px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.65
+          }
+        }
+      ]
+    },
+    {
+      "id": "corp-m-about",
+      "type": "container",
+      "x": 0,
+      "y": 620,
+      "zIndex": 2,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "520px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 520,
+        "paddingPx": 0,
+        "backgroundColor": "#ffffff",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "corp-m-about-kicker",
+          "type": "text",
+          "x": 20,
+          "y": 32,
+          "zIndex": 1,
+          "text": "ABOUT US",
+          "style": {
+            "color": "#3b4d6b",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "corp-m-about-title",
+          "type": "text",
+          "x": 20,
+          "y": 64,
+          "zIndex": 1,
+          "text": "会社紹介",
+          "style": {
+            "color": "#1b2b44",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "24px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "corp-m-about-body",
+          "type": "text",
+          "x": 20,
+          "y": 124,
+          "zIndex": 1,
+          "text": "私たちは、戦略設計から実行支援まで一気通貫で伴走するビジネスパートナーです。業界知見とデータ活用を組み合わせ、企業価値向上に貢献します。",
+          "style": {
+            "color": "#33435d",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "16px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.75
+          }
+        }
+      ]
+    },
+    {
+      "id": "corp-m-services",
+      "type": "container",
+      "x": 0,
+      "y": 922,
+      "zIndex": 3,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "414px",
+        "height": "603px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 414,
+        "heightPx": 603,
+        "paddingPx": 0,
+        "backgroundColor": "#f1f5fb",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "corp-m-svc-kicker",
+          "type": "text",
+          "x": 20,
+          "y": 36,
+          "zIndex": 1,
+          "text": "SERVICES",
+          "style": {
+            "color": "#3b4d6b",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.18em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "corp-m-svc-title",
+          "type": "text",
+          "x": 20,
+          "y": 68,
+          "zIndex": 1,
+          "text": "サービス紹介",
+          "style": {
+            "color": "#1b2b44",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "24px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "corp-m-svc-a",
+          "type": "text",
+          "x": 20,
+          "y": 140,
+          "zIndex": 2,
+          "text": "⚙ 業務改善支援\n現場課題を可視化し、プロセス最適化を実現。",
+          "style": {
+            "color": "#2f4f86",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "17px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.7
+          }
+        },
+        {
+          "id": "corp-m-svc-b",
+          "type": "text",
+          "x": 20,
+          "y": 300,
+          "zIndex": 2,
+          "text": "📈 マーケティング\n市場分析と戦略設計で売上拡大を支援。",
+          "style": {
+            "color": "#2f4f86",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "17px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.7
+          }
+        },
+        {
+          "id": "corp-m-svc-c",
+          "type": "text",
+          "x": 20,
+          "y": 431,
+          "zIndex": 2,
+          "text": "🤝 組織コンサル\n制度設計と人材育成で成長基盤を構築。",
+          "style": {
+            "color": "#2f4f86",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "17px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.7
+          }
+        }
+      ]
+    },
+    {
+      "id": "corp-m-achievements",
+      "type": "container",
+      "x": 0,
+      "y": 1525,
+      "zIndex": 4,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "1000px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 1000,
+        "paddingPx": 0,
+        "backgroundColor": "#ffffff",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "corp-m-ach-kicker",
+          "type": "text",
+          "x": 20,
+          "y": 28,
+          "zIndex": 1,
+          "text": "ACHIEVEMENTS",
+          "style": {
+            "color": "#3b4d6b",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.18em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "corp-m-ach-title",
+          "type": "text",
+          "x": 20,
+          "y": 60,
+          "zIndex": 1,
+          "text": "実績",
+          "style": {
+            "color": "#1b2b44",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "24px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "corp-m-stat-a-wrap",
+          "type": "container",
+          "x": 24,
+          "y": 120,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "352px",
+            "minHeight": "236px",
+            "width": "352px",
+            "height": "236px",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 352,
+            "minHeightPx": 236,
+            "widthPx": 352,
+            "heightPx": 236,
+            "paddingPx": 0,
+            "backgroundColor": "",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "corp-m-stat-a-circle",
+              "type": "container",
+              "x": 71,
+              "y": 0,
+              "zIndex": 1,
+              "style": {
+                "minWidth": "210px",
+                "minHeight": "210px",
+                "width": "210px",
+                "height": "210px",
+                "padding": "0px",
+                "borderRadius": "999px",
+                "minWidthPx": 210,
+                "minHeightPx": 210,
+                "widthPx": 210,
+                "heightPx": 210,
+                "paddingPx": 0,
+                "backgroundColor": "#f8fbff",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 999
+              },
+              "children": []
+            },
+            {
+              "id": "corp-m-stat-a-num",
+              "type": "text",
+              "x": 0,
+              "y": 48,
+              "zIndex": 2,
+              "text": "300+\nProjects",
+              "style": {
+                "color": "#1f365f",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.2
+              }
+            },
+            {
+              "id": "corp-m-stat-a-cap",
+              "type": "text",
+              "x": 0,
+              "y": 206,
+              "zIndex": 2,
+              "text": "支援プロジェクト数",
+              "style": {
+                "color": "#3b4d6b",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "corp-m-stat-b-wrap",
+          "type": "container",
+          "x": 24,
+          "y": 380,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "352px",
+            "minHeight": "236px",
+            "width": "352px",
+            "height": "236px",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 352,
+            "minHeightPx": 236,
+            "widthPx": 352,
+            "heightPx": 236,
+            "paddingPx": 0,
+            "backgroundColor": "",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "corp-m-stat-b-circle",
+              "type": "container",
+              "x": 71,
+              "y": 0,
+              "zIndex": 1,
+              "style": {
+                "minWidth": "210px",
+                "minHeight": "210px",
+                "width": "210px",
+                "height": "210px",
+                "padding": "0px",
+                "borderRadius": "999px",
+                "minWidthPx": 210,
+                "minHeightPx": 210,
+                "widthPx": 210,
+                "heightPx": 210,
+                "paddingPx": 0,
+                "backgroundColor": "#f8fbff",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 999
+              },
+              "children": []
+            },
+            {
+              "id": "corp-m-stat-b-num",
+              "type": "text",
+              "x": 0,
+              "y": 48,
+              "zIndex": 2,
+              "text": "96%\nSatisfaction",
+              "style": {
+                "color": "#1f365f",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.2
+              }
+            },
+            {
+              "id": "corp-m-stat-b-cap",
+              "type": "text",
+              "x": 0,
+              "y": 204,
+              "zIndex": 2,
+              "text": "顧客満足度",
+              "style": {
+                "color": "#3b4d6b",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "corp-m-stat-c-wrap",
+          "type": "container",
+          "x": 24,
+          "y": 640,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "352px",
+            "minHeight": "236px",
+            "width": "352px",
+            "height": "236px",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 352,
+            "minHeightPx": 236,
+            "widthPx": 352,
+            "heightPx": 236,
+            "paddingPx": 0,
+            "backgroundColor": "",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "corp-m-stat-c-circle",
+              "type": "container",
+              "x": 71,
+              "y": 0,
+              "zIndex": 1,
+              "style": {
+                "minWidth": "210px",
+                "minHeight": "210px",
+                "width": "210px",
+                "height": "210px",
+                "padding": "0px",
+                "borderRadius": "999px",
+                "minWidthPx": 210,
+                "minHeightPx": 210,
+                "widthPx": 210,
+                "heightPx": 210,
+                "paddingPx": 0,
+                "backgroundColor": "#f8fbff",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 999
+              },
+              "children": []
+            },
+            {
+              "id": "corp-m-stat-c-num",
+              "type": "text",
+              "x": 0,
+              "y": 75,
+              "zIndex": 2,
+              "text": "20 Years",
+              "style": {
+                "color": "#1f365f",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.2
+              }
+            },
+            {
+              "id": "corp-m-stat-c-cap",
+              "type": "text",
+              "x": 0,
+              "y": 204,
+              "zIndex": 2,
+              "text": "業界経験",
+              "style": {
+                "color": "#3b4d6b",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "352px",
+                "heightPx": 0,
+                "lineHeight": 1.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corp-m-contact",
+      "type": "container",
+      "x": 0,
+      "y": 2526,
+      "zIndex": 5,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "900px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 900,
+        "paddingPx": 0,
+        "backgroundColor": "#1b2b44",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "corp-m-ct-kicker",
+          "type": "text",
+          "x": 20,
+          "y": 48,
+          "zIndex": 1,
+          "text": "CONTACT US",
+          "style": {
+            "color": "#d7e3f8",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em",
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "id": "corp-m-ct-title",
+          "type": "text",
+          "x": 20,
+          "y": 80,
+          "zIndex": 1,
+          "text": "まずはお気軽にご相談ください",
+          "style": {
+            "color": "#ffffff",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "22px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "corp-m-ct-form",
+          "type": "contact",
+          "x": 12,
+          "y": 178,
+          "zIndex": 2,
+          "label": "お問い合わせフォーム",
+          "submitLabel": "送信する",
+          "contact": {
+            "mode": "none",
+            "value": ""
+          },
+          "style": {
+            "color": "#ffffff",
+            "backgroundColor": "transparent",
+            "backgroundColorSolid": "#2f4f86",
+            "fieldHeightsPx": [
+              44,
+              44,
+              120
+            ],
+            "contactGapTitleBodyPct": 2,
+            "contactGapFieldsPct": 2,
+            "contactGapMainButtonPct": 3,
+            "contactGapLabelFieldPct": 1,
+            "contactTitleColor": "#1e293b",
+            "contactTitleTextAlign": "left",
+            "contactFieldLabelColors": [
+              "#64748b",
+              "#64748b",
+              "#64748b"
+            ],
+            "contactFieldLabelTextAligns": [
+              "left",
+              "left",
+              "left"
+            ],
+            "contactFormBackgroundColor": "#abb9cf",
+            "paddingVerticalPx": 12,
+            "paddingHorizontalPx": 16,
+            "borderWidthPx": 0,
+            "borderColor": "#2f4f86",
+            "backgroundImageSrc": "",
+            "backgroundImageFit": "cover",
+            "contactTitleFontSize": "15px",
+            "contactFieldLabelFontSizes": [
+              "11px",
+              "11px",
+              "11px"
+            ],
+            "contactFieldLabelFontSizePx": [
+              11,
+              11,
+              11
+            ],
+            "fontSize": "16px",
+            "formWidth": "376px",
+            "formHeight": "480px",
+            "contactFormBorderRadius": "8px",
+            "submitWidth": "100%",
+            "submitHeightPx": 0,
+            "borderRadius": "8px"
+          }
+        },
+        {
+          "id": "corp-m-ct-co",
+          "type": "text",
+          "x": 28,
+          "y": 763,
+          "zIndex": 2,
+          "text": "株式会社サンプルコーポレーション",
+          "style": {
+            "color": "#d7e3f8",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "15px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.5
+          }
+        },
+        {
+          "id": "corp-m-ct-addr",
+          "type": "text",
+          "x": 28,
+          "y": 793,
+          "zIndex": 2,
+          "text": "〒100-0001 東京都千代田区千代田1-1-1",
+          "style": {
+            "color": "#c2d4f0",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "14px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.6
+          }
+        }
+      ]
+    }
+  ]
+}

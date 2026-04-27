@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/generate", "destination": "/api/generate" },
+    { "source": "/editor", "destination": "/index.html" },
+    { "source": "/view", "destination": "/lp.html" },
+    { "source": "/(.*)", "destination": "/$1" }
+  ]
+}

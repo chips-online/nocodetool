@@ -1,0 +1,4205 @@
+:root {
+  /* パレット: #F7F3ED #3C2355 #7ACBC5 #DCD3D8 #7E57A4 */
+  --cream: #f7f3ed;
+  --plum: #3c2355;
+  --mint: #7acbc5;
+  --mauve: #dcd3d8;
+  --purple: #7e57a4;
+  --bg: var(--cream);
+  --surface: #fffdf9;
+  --border: var(--mauve);
+  --text: var(--plum);
+  --muted: #6e5d7a;
+  --accent: var(--purple);
+  --accent-hover: #6b4690;
+  --accent-mint: var(--mint);
+  --canvas-bg: #fffbf6;
+  --shadow: 0 2px 12px rgba(60, 35, 85, 0.07);
+  --radius: 8px;
+  --sidebar-width: 280px;
+  --workspace-rail-width: 300px;
+  --canvas-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.app {
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.app-header {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding: 16px 24px;
+  background: linear-gradient(165deg, var(--surface) 0%, #faf5ef 100%);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.app-header__main {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+.app-header__persist {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  max-width: min(100%, 560px);
+}
+
+.persist-toolbar {
+  width: 100%;
+}
+
+.persist-toolbar__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px 10px;
+}
+
+.persist-panel__primary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  width: auto;
+  flex: 0 1 auto;
+}
+
+.persist-accordion {
+  align-self: flex-end;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 249, 0.85);
+  box-shadow: 0 1px 4px rgba(60, 35, 85, 0.06);
+}
+
+.persist-accordion--toolbar {
+  align-self: center;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.persist-accordion__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.persist-accordion__summary--toolbar {
+  justify-content: flex-start;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.persist-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.persist-accordion__summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 0.45em;
+  height: 0.45em;
+  margin-left: 4px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.persist-accordion__summary--toolbar::after {
+  display: none;
+}
+
+.persist-accordion__mark {
+  display: inline-block;
+  margin-left: 1px;
+  font-size: 0.65rem;
+  line-height: 1;
+  vertical-align: middle;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+}
+
+.persist-accordion--toolbar[open] .persist-accordion__mark {
+  transform: rotate(-180deg);
+}
+
+.persist-accordion[open]:not(.persist-accordion--toolbar) .persist-accordion__summary::after {
+  transform: rotate(225deg);
+}
+
+.persist-accordion__inner {
+  padding: 0 12px 12px;
+  border-top: 1px solid var(--border);
+  text-align: right;
+}
+
+.persist-accordion__inner--dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 50;
+  width: min(380px, calc(100vw - 32px));
+  padding: 12px;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 249, 0.98);
+  box-shadow: 0 10px 28px rgba(60, 35, 85, 0.14);
+  text-align: right;
+}
+
+.persist-toolbar .persist-status {
+  margin: 2px 0 0;
+  width: 100%;
+}
+
+.persist-panel__title {
+  margin: 10px 0 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.persist-panel__hint {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.35;
+  max-width: 28em;
+  margin-left: auto;
+}
+
+.persist-panel__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+}
+
+.persist-panel__btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.app-header__persist .btn {
+  padding: 8px 12px;
+  font-size: 0.8125rem;
+  border-radius: 999px;
+}
+
+.app-title {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.app-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.app-nav-extras {
+  margin: 8px 0 0;
+  font-size: 0.8125rem;
+}
+
+.app-nav-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.app-nav-link:hover {
+  text-decoration: underline;
+}
+
+/* 公開プレビュー（lp.html iframe 等）: ツールを隠して閲覧のみ */
+body.nocode-published-mode .app-header,
+body.nocode-published-mode .sidebar,
+body.nocode-published-mode .sidebar-toggle,
+body.nocode-published-mode .workspace-rail {
+  display: none !important;
+}
+
+body.nocode-published-mode .workspace {
+  flex: 1;
+  min-width: 0;
+}
+
+body.nocode-published-mode .main-area {
+  flex: 1;
+  max-width: none;
+}
+
+body.nocode-published-mode .canvas-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-published-mode .canvas-block__resize-handle {
+  display: none !important;
+}
+
+body.nocode-published-mode .canvas-block__text {
+  pointer-events: none;
+  user-select: none;
+}
+
+body.nocode-published-mode .canvas {
+  cursor: default;
+}
+
+/*
+ * 公開プレビュー（lp.html iframe）でスマホ用データを表示するとき:
+ * 編集画面のスマホビューと同様にキャンバス幅・子ブロックのはみ出しを抑える
+ */
+body.nocode-published-mode.nocode-edit-view-responsive .canvas-zoom-stack {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  max-width: 100%;
+  align-self: stretch;
+}
+
+body.nocode-published-mode.nocode-edit-view-responsive .canvas-zoom-viewport {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.nocode-published-mode.nocode-edit-view-responsive .canvas-scroll {
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  max-height: none;
+}
+
+body.nocode-published-mode.nocode-edit-view-responsive .canvas,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas-sp {
+  overflow-x: clip;
+  overflow-y: visible;
+  box-sizing: border-box;
+}
+
+body.nocode-published-mode.nocode-edit-view-responsive .canvas > .canvas-block:not(.canvas-block--container),
+body.nocode-published-mode.nocode-edit-view-responsive .canvas > .block,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas > .canvas-block--container,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas > .block {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__img,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__text,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__btn,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__contact-form,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__contact-main,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__contact-body,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__contact-fake,
+body.nocode-published-mode.nocode-edit-view-responsive .canvas .canvas-block__nest {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+body.nocode-published-mode.nocode-edit-view-responsive .main-area {
+  overflow: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+
+/*
+ * 公開プレビュー（lp.html iframe 等）でスマホ用データを表示するとき、
+ * ネストした overflow:auto が効かず下部までスクロールできない端末がある。
+ * html に nocode-published-responsive-scroll を付けたときは body を縦スクロールの根にする。
+ */
+html.nocode-published-responsive-scroll {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: auto !important;
+  min-height: 100%;
+}
+
+@supports (height: 100dvh) {
+  html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive {
+    min-height: 100dvh;
+  }
+}
+
+html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive .app {
+  height: auto !important;
+  max-height: none !important;
+}
+
+html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive .app-body,
+html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive .workspace {
+  overflow: visible !important;
+}
+
+html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive .main-area {
+  overflow: visible !important;
+  flex: 1 1 auto;
+}
+
+html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive .canvas-zoom-stack {
+  flex: 0 0 auto !important;
+}
+
+html.nocode-published-responsive-scroll body.nocode-published-mode.nocode-edit-view-responsive .canvas-zoom-viewport {
+  overflow: visible !important;
+  flex: none !important;
+}
+
+body.nocode-published-mode.nocode-published--fit-desktop .canvas-zoom-viewport {
+  overflow-x: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.nocode-published-mode.nocode-published--fit-desktop .canvas-scroll {
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: min-content;
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 左: ツール／右: キャンバス + 右レール（設定・プロパティ） */
+.workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.workspace-rail {
+  width: var(--workspace-rail-width);
+  flex-shrink: 0;
+  align-self: stretch;
+  min-height: 0;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(195deg, #fbf9f6 0%, var(--surface) 45%, #ede8e2 100%);
+  border-left: 1px solid var(--border);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.6);
+}
+
+.workspace--rail-collapsed .workspace-rail {
+  display: none !important;
+}
+
+.workspace-rail-toggle {
+  flex-shrink: 0;
+  width: 14px;
+  align-self: stretch;
+  min-height: 3rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  background: linear-gradient(180deg, #e8e4df 0%, #ddd6ce 100%);
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.workspace-rail-toggle:hover {
+  background: linear-gradient(180deg, #ddd6ce 0%, #d4cdc4 100%);
+  color: var(--text);
+}
+
+.workspace-rail-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.workspace-rail-toggle__icon {
+  display: block;
+  transform: scaleY(1.35);
+  font-weight: 700;
+}
+
+body.nocode-published-mode .workspace-rail-toggle {
+  display: none !important;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  align-self: stretch;
+  min-height: 0;
+  background: linear-gradient(180deg, var(--surface) 0%, #faf5ef 55%, #f5efe8 100%);
+  border-right: 1px solid var(--border);
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app-body--sidebar-collapsed .sidebar {
+  display: none !important;
+}
+
+.sidebar-toggle {
+  flex-shrink: 0;
+  width: 14px;
+  align-self: stretch;
+  min-height: 3rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  background: linear-gradient(180deg, #e8e4df 0%, #ddd6ce 100%);
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sidebar-toggle:hover {
+  background: linear-gradient(180deg, #ddd6ce 0%, #d4cdc4 100%);
+  color: var(--text);
+}
+
+.sidebar-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.sidebar-toggle__icon {
+  display: block;
+  transform: scaleY(1.35);
+  font-weight: 700;
+}
+
+.sidebar-section + .sidebar-section {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.sidebar-heading {
+  margin: 0 0 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.sidebar-hint {
+  margin: 8px 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.sidebar-hint--nest {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.persist-status {
+  margin: 0 0 10px;
+  width: 100%;
+  min-height: 1.25em;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.ai-text-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.ai-text-section__head .sidebar-heading {
+  margin-bottom: 0;
+}
+
+.ai-text-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  background: rgba(126, 87, 164, 0.1);
+  border: 1px solid rgba(126, 87, 164, 0.28);
+  border-radius: 999px;
+}
+
+.ai-text-hint {
+  margin: 0 0 12px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.ai-text-generate-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.contact-props-hint {
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--muted);
+  background: rgba(122, 203, 197, 0.12);
+  border: 1px solid rgba(122, 203, 197, 0.35);
+  border-radius: 6px;
+}
+
+.canvas-block__contact-form {
+  --contact-gap-title-body: 2%;
+  --contact-gap-fields: 2%;
+  --contact-gap-main-button: 3%;
+  --contact-gap-label-fake: 1%;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  padding-bottom: 14px;
+  gap: max(12px, var(--contact-gap-main-button));
+  max-width: 100%;
+  min-height: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(60, 35, 85, 0.06);
+  box-sizing: border-box;
+}
+
+.canvas-block__contact-main {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--contact-gap-title-body);
+  margin-bottom: 0;
+}
+
+.canvas-block__contact-title {
+  flex-shrink: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  padding: 2px 0;
+}
+
+.canvas-block__contact-title.is-editing {
+  cursor: text;
+  user-select: text;
+  outline: 1px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+.canvas-block__contact-body {
+  flex: 1 1 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(56px, 56fr) minmax(56px, 56fr) minmax(180px, 180fr);
+  align-content: stretch;
+  gap: var(--contact-gap-fields);
+}
+
+.canvas-block__contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--contact-gap-label-fake);
+  min-height: 0;
+  height: 100%;
+  align-self: stretch;
+}
+
+.canvas-block__contact-row-label {
+  display: block;
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.canvas-block__contact-fake {
+  display: block;
+  flex: 1 1 auto;
+  min-height: 4px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--text);
+  background: #ffffff;
+  border: 1px solid rgba(60, 35, 85, 0.1);
+  box-sizing: border-box;
+}
+
+.canvas-block__contact-input {
+  pointer-events: auto;
+}
+
+textarea.canvas-block__contact-input {
+  resize: vertical;
+}
+
+.canvas-block--contact .canvas-block__contact-submit {
+  flex-shrink: 0;
+  align-self: stretch;
+  margin-top: 0;
+  box-shadow: 0 1px 0 rgba(60, 35, 85, 0.08);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.canvas-block.is-selected .canvas-block__contact-submit {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-group .btn {
+  border-radius: 999px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: var(--bg);
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #8b63b0 0%, var(--accent) 100%);
+  border-color: #684494;
+  color: #fffdf9;
+  box-shadow: 0 1px 2px rgba(60, 35, 85, 0.12);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, var(--accent-hover) 0%, #5a3a78 100%);
+  border-color: #5a3a78;
+}
+
+.btn-danger {
+  background: rgba(126, 87, 164, 0.08);
+  border-color: rgba(126, 87, 164, 0.35);
+  color: #5a2860;
+}
+
+.btn-danger:hover {
+  background: rgba(122, 203, 197, 0.2);
+  border-color: var(--mint);
+  color: var(--plum);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.props-delete-field {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.props-empty {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.props-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.props-form[hidden] {
+  display: none !important;
+}
+
+.props-accordion {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(247, 243, 237, 0.65);
+  overflow: hidden;
+}
+
+.props-accordion__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text);
+  list-style: none;
+  user-select: none;
+}
+
+.props-accordion__summary:focus {
+  outline: none;
+}
+
+.props-accordion__summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.props-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.props-accordion__summary::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--muted);
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+}
+
+.props-accordion[open] .props-accordion__summary::after {
+  transform: rotate(180deg);
+}
+
+.props-accordion[open] .props-accordion__summary {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.props-accordion__panel {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+}
+
+.layers-hint {
+  margin: 0 0 12px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.layers-hint__top {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.layers-hint__sep {
+  display: none;
+}
+
+.layers-hint--tree {
+  margin: -4px 0 12px;
+  font-size: 0.6875rem;
+  color: var(--muted);
+  line-height: 1.4;
+  display: block;
+}
+
+.layers-hint--keys {
+  margin: -8px 0 12px;
+  font-size: 0.6875rem;
+  color: var(--muted);
+  line-height: 1.45;
+  display: block;
+}
+
+.layers-hint--keys kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  font-size: 0.625rem;
+  font-family: inherit;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* レイヤー操作エリアとは別枠の「使用方法説明」（普段は閉じたまま） */
+.layers-help {
+  margin: 0 0 10px;
+  border: 1px solid rgba(100, 116, 139, 0.35);
+  border-radius: 6px;
+  background: linear-gradient(
+    165deg,
+    rgba(241, 245, 249, 0.85) 0%,
+    rgba(226, 232, 240, 0.55) 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.layers-help__summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.layers-help__summary::-webkit-details-marker {
+  display: none;
+}
+
+.layers-help__summary::after {
+  content: "";
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #64748b;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.layers-help[open] .layers-help__summary::after {
+  transform: rotate(180deg);
+}
+
+.layers-help__summary:hover {
+  color: #334155;
+}
+
+.layers-help__summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.layers-help__summary-icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: #64748b;
+  color: #f8fafc;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  line-height: 1.25rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.15);
+}
+
+.layers-help__summary-icon::before {
+  content: "i";
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.layers-help__summary-label {
+  letter-spacing: 0.02em;
+}
+
+.layers-help__panel {
+  padding: 0 10px 10px 10px;
+  border-top: 1px solid rgba(100, 116, 139, 0.22);
+}
+
+.layers-help .layers-hint--in-help {
+  margin: 0 0 8px;
+}
+
+.layers-help .layers-hint--in-help:last-child {
+  margin-bottom: 0;
+}
+
+.layers-help .layers-hint--tree.layers-hint--in-help {
+  margin-top: 2px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.layers-help .layers-hint--keys.layers-hint--in-help {
+  display: block;
+}
+
+.layers-toolbar {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+
+.layers-toolbar__btn {
+  flex: 1;
+  padding: 4px 8px;
+  font-size: 0.6875rem;
+  line-height: 1.3;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.layers-toolbar__btn:hover:not(:disabled) {
+  border-color: rgba(122, 203, 197, 0.65);
+}
+
+.layers-toolbar__btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.layers-toolbar__btn--danger {
+  border-color: rgba(185, 28, 28, 0.35);
+  color: #b91c1c;
+  background: rgba(254, 226, 226, 0.35);
+}
+
+.layers-toolbar__btn--danger:hover:not(:disabled) {
+  border-color: rgba(185, 28, 28, 0.55);
+  background: rgba(254, 226, 226, 0.55);
+}
+
+.layers-empty {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.layers-empty[hidden],
+.layer-list[hidden] {
+  display: none !important;
+}
+
+.layer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.layer-list--branch {
+  margin: 0;
+  padding: 2px 0 0 6px;
+  border-left: 1px solid var(--border);
+  gap: 2px;
+}
+
+.layer-item--nested {
+  padding: 4px 6px;
+}
+
+.layer-item--nested .layer-item__badge {
+  min-width: 1.35rem;
+  height: 1.25rem;
+  font-size: 0.5625rem;
+}
+
+.layer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 4px 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.12s, box-shadow 0.12s;
+}
+
+.layer-item__branch {
+  margin-top: 2px;
+}
+
+.layer-item.is-drop-target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(126, 87, 164, 0.35);
+}
+
+.layer-item.is-dragging-source {
+  opacity: 0.85;
+}
+
+.layer-item--hidden {
+  opacity: 0.65;
+}
+
+.layer-item:hover {
+  border-color: rgba(122, 203, 197, 0.65);
+}
+
+.layer-item.is-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.layer-item__row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  flex-wrap: nowrap;
+}
+
+.layer-item__toggle,
+.layer-item__toggle-spacer {
+  flex-shrink: 0;
+  width: 1rem;
+  text-align: center;
+  font-size: 0.5625rem;
+  line-height: 1.2;
+  color: var(--muted);
+  user-select: none;
+}
+
+.layer-item__toggle {
+  cursor: pointer;
+  border: none;
+  padding: 2px 0;
+  background: transparent;
+  font-family: inherit;
+  border-radius: 2px;
+}
+
+.layer-item__toggle:hover {
+  color: var(--accent);
+  background: rgba(126, 87, 164, 0.08);
+}
+
+.layer-item__toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.layer-item__vis-label {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+.layer-item__vis-cb {
+  width: 0.875rem;
+  height: 0.875rem;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.layer-item__drag-handle {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: grab;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.layer-item__drag-handle:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.layer-item__drag-handle:active {
+  cursor: grabbing;
+}
+
+.layer-item__badge {
+  flex-shrink: 0;
+  min-width: 1.75rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.layer-item.is-front .layer-item__badge {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(126, 87, 164, 0.12);
+}
+
+.layer-item.is-back .layer-item__badge {
+  color: var(--muted);
+}
+
+.layer-item__body {
+  min-width: 0;
+  flex: 1;
+}
+
+.layer-item__head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.layer-item__type-tag {
+  flex-shrink: 0;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  max-width: 3.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.layer-item__title-input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 2px 5px;
+  font-size: 0.6875rem;
+  line-height: 1.25;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.layer-item__title-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(126, 87, 164, 0.25);
+}
+
+.layer-item__z-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.layer-item__z-btn {
+  min-width: 1.375rem;
+  padding: 1px 3px;
+  font-size: 0.6875rem;
+  line-height: 1.2;
+}
+
+.layer-item__z-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="url"],
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.field input[type="color"] {
+  width: 100%;
+  height: 36px;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.field--colorPair .field__color-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.field--colorPair .field__color-row input[type="color"] {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 36px;
+}
+
+.field--colorPair .field__color-hex {
+  flex: 1;
+  min-width: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+}
+
+.field textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.field-dimension {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.field-dimension .field-dimension__num {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-dimension .field-dimension__unit {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 4rem;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.field-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.field-checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.props-align-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.props-align-actions__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.props-align-actions__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.props-align-actions__btns .btn {
+  flex: 1;
+  min-width: 4.5rem;
+  padding: 8px 10px;
+  font-size: 0.8125rem;
+}
+
+.main-area {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 24px;
+  overflow: auto;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background: radial-gradient(ellipse 120% 80% at 50% 0%, rgba(122, 203, 197, 0.12) 0%, transparent 55%),
+    var(--bg);
+}
+
+.viewport-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  padding: 10px 14px;
+  margin: 0 0 10px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(126, 87, 164, 0.2);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(30, 41, 59, 0.06);
+}
+
+.viewport-toolbar__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.viewport-segment {
+  display: inline-flex;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(126, 87, 164, 0.35);
+}
+
+.viewport-segment__btn {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  background: #fff;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.viewport-segment__btn + .viewport-segment__btn {
+  border-left: 1px solid rgba(126, 87, 164, 0.25);
+}
+
+.viewport-segment__btn:hover {
+  background: rgba(122, 203, 197, 0.15);
+  color: var(--text);
+}
+
+.viewport-segment__btn.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.viewport-segment__btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.viewport-toolbar__hint {
+  margin: 0;
+  width: 100%;
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+body.nocode-published-mode .viewport-toolbar {
+  display: none;
+}
+
+.canvas-scroll--viewport-responsive {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 3px solid rgba(122, 203, 197, 0.65);
+  box-sizing: border-box;
+}
+
+/* ---------- キャンバス表示の拡大縮小（編集時のみ） ---------- */
+.canvas-zoom-stack {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.canvas-zoom-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 12px;
+  margin: 0 0 10px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(126, 87, 164, 0.2);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(30, 41, 59, 0.06);
+}
+
+.canvas-zoom-bar__btn {
+  min-width: 2rem;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid rgba(126, 87, 164, 0.35);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.canvas-zoom-bar__btn:hover {
+  background: rgba(122, 203, 197, 0.15);
+}
+
+.canvas-zoom-bar__btn--text {
+  min-width: unset;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.canvas-zoom-bar__range {
+  flex: 1;
+  min-width: 120px;
+  max-width: 220px;
+  accent-color: var(--accent);
+}
+
+.canvas-zoom-bar__pct {
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  min-width: 2.75rem;
+}
+
+.canvas-zoom-viewport {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.canvas-zoom-scale {
+  display: block;
+  margin: 0 auto;
+}
+
+body.nocode-published-mode .canvas-zoom-bar {
+  display: none;
+}
+
+body.nocode-published-mode .canvas-zoom-stack {
+  flex: none;
+}
+
+body.nocode-published-mode .canvas-zoom-viewport {
+  flex: none;
+  overflow: visible;
+}
+
+body.nocode-published-mode #canvas-zoom-scale {
+  zoom: 1 !important;
+  transform: none !important;
+  width: auto !important;
+  min-height: 0 !important;
+}
+
+.canvas-scroll {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/*
+ * PC 編集ビュー（既定）: メインエリア内でキャンバスを中央に。
+ * 上の flex-start のままだと、右パネル展開時は常にキャンバスが左に寄る（初回読込・テンプレ再読込の差は別要因に見えても同根）。
+ * スマホ編集・公開プレビューは下記／body.nocode-published-mode で既に中央寄せ。ここは PC のみに限定する。
+ */
+body:not(.nocode-published-mode):not(.nocode-edit-view-responsive) .canvas-scroll {
+  justify-content: center;
+  align-items: flex-start;
+  /* flex 子の min-width:auto だと子 #canvas の固定幅で min-content が膨らみ、横スクロールの左端だけが見える原因になる */
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* PC 編集: flex 中央に加え #canvas 自体も左右マージン自動で中央寄せ（初回描画・再読込でもズレにくくする） */
+body:not(.nocode-published-mode):not(.nocode-edit-view-responsive) .canvas-scroll > .canvas {
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+/* 美容サロン・PC 編集: テンプレ識別子付きでもキャンバスを確実に中央へ（左に寄って見えるのを防ぐ） */
+body.nocode-tpl--beautySalon:not(.nocode-published-mode):not(.nocode-edit-view-responsive) .canvas-scroll {
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon:not(.nocode-published-mode):not(.nocode-edit-view-responsive) .canvas-scroll > .canvas {
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+/*
+ * 美容サロン・PC 編集: main-area を column のまま子を中央に。
+ * align-items 未指定の stretch だと、横に余白があってもキャンバス列が左に張り付いて見えることがある。
+ * ツールバーは stretch で全幅を維持する。
+ */
+body.nocode-tpl--beautySalon:not(.nocode-published-mode):not(.nocode-edit-view-responsive) .main-area {
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon:not(.nocode-published-mode):not(.nocode-edit-view-responsive) .viewport-toolbar {
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon:not(.nocode-published-mode):not(.nocode-edit-view-responsive) .canvas-zoom-stack {
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* スマホ編集モード: キャンバスをメインエリアの中央へ（右寄せに見えないよう） */
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-scroll {
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  max-height: none;
+}
+
+/* スマホ編集: 疑似キャンバス内の横はみ出し防止（PC には影響させない） */
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-sp {
+  /* hidden だと別軸が auto に丸められキャンバス内に縦スクロールが付くことがある */
+  overflow-x: clip;
+  overflow-y: visible;
+  box-sizing: border-box;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas > .canvas-block:not(.canvas-block--container),
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas > .block,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas > .canvas-block--container,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas > .block {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__img,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__btn,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__contact-form,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__contact-main,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__contact-body,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__contact-fake,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__nest {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .viewport-toolbar {
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* スマホ編集モードは「画面全体」でスクロールし、キャンバス領域内スクロールバーを出さない */
+body.nocode-edit-view-responsive:not(.nocode-published-mode) {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .app {
+  height: auto;
+  max-height: none;
+  min-height: 100%;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .app-body,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .workspace,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .main-area {
+  overflow: visible;
+}
+
+/*
+ * スマホ編集ビューでも PC と同様に絶対配置でドラッグ編集できるようにする。
+ * （以前はプレビュー用に nest 内を縦積み relative にしていたが、編集不能になるため廃止）
+ */
+
+/* 右パネルを閉じたときはキャンバスをエリア中央に寄せ、全体を見渡しやすくする */
+.workspace--rail-collapsed .canvas-scroll {
+  justify-content: center;
+}
+
+.canvas-height-hint {
+  margin: 10px 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.canvas {
+  position: relative;
+  width: var(--canvas-width);
+  min-height: 200px;
+  height: auto;
+  background-color: var(--canvas-bg);
+  border: 1px dashed rgba(126, 87, 164, 0.35);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.canvas.is-dragging {
+  cursor: grabbing;
+}
+
+.canvas-block {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  cursor: grab;
+  user-select: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline-color 0.12s;
+}
+
+.canvas-block:active {
+  cursor: grabbing;
+}
+
+.canvas-block.is-selected {
+  outline-color: var(--accent);
+}
+
+.canvas-block.block-editing {
+  cursor: text;
+}
+
+.canvas-block.block-editing:active {
+  cursor: text;
+}
+
+.canvas-block__text {
+  margin: 0;
+  padding: 4px 8px;
+  min-width: 40px;
+  min-height: 1.2em;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.canvas-block__text.is-editing {
+  cursor: text;
+  user-select: text;
+  outline: 1px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+.canvas-block__img {
+  display: block;
+  max-width: none;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.canvas-block__btn {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 6px;
+  font: inherit;
+  cursor: grab;
+  pointer-events: none;
+}
+
+.canvas-block.is-selected .canvas-block__btn {
+  pointer-events: none;
+}
+
+.canvas-block__btn.is-editing,
+.canvas-block.is-selected .canvas-block__btn.is-editing {
+  pointer-events: auto;
+  cursor: text;
+  user-select: text;
+  outline: 1px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+.canvas-block--container {
+  min-width: 120px;
+  min-height: 80px;
+}
+
+.canvas-block__nest {
+  position: relative;
+  min-width: 100px;
+  min-height: 60px;
+  box-sizing: border-box;
+  border-radius: 0;
+  /* 枠線・薄い背景は付けない（プロパティやデータで指定したときのみ JS が反映） */
+  border: none;
+  background: transparent;
+}
+
+.canvas-block__container-spacer {
+  display: block;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.canvas-block__resize-handle {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: var(--mint);
+  cursor: nwse-resize;
+  z-index: 80;
+  box-shadow: 0 0 0 2px var(--surface);
+  display: none;
+  pointer-events: auto;
+}
+
+.canvas-block--container.is-selected .canvas-block__resize-handle {
+  display: block;
+}
+
+.canvas-block.is-selected:not(.canvas-block--container) > .canvas-block__resize-handle {
+  display: block;
+}
+
+.canvas-snap-guides {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10000;
+  overflow: visible;
+}
+
+.canvas-snap-guide--v {
+  position: absolute;
+  width: 1px;
+  margin-left: -0.5px;
+  background: var(--mint);
+  opacity: 0.95;
+  box-shadow: 0 0 0 1px rgba(255, 253, 249, 0.85);
+}
+
+.canvas-snap-guide--h {
+  position: absolute;
+  height: 1px;
+  margin-top: -0.5px;
+  background: var(--mint);
+  opacity: 0.95;
+  box-shadow: 0 0 0 1px rgba(255, 253, 249, 0.85);
+}
+
+.props-multiselect-hint {
+  margin: 0 0 12px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.canvas-measure-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 9998;
+  overflow: visible;
+}
+
+.canvas-measure-line {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(60, 35, 85, 0.45);
+}
+
+.canvas-measure-line--h {
+  height: 1px;
+  transform: translateY(-0.5px);
+}
+
+.canvas-measure-line--v {
+  width: 1px;
+  transform: translateX(-0.5px);
+}
+
+.canvas-measure-line.is-to-block {
+  background: #5ab8b0;
+  box-shadow: 0 0 0 1px rgba(255, 253, 249, 0.75);
+}
+
+.canvas-measure-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fffdf9;
+  background: rgba(60, 35, 85, 0.82);
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.canvas-measure-label.is-to-block {
+  background: rgba(90, 184, 176, 0.95);
+  color: var(--plum);
+}
+
+@media (max-width: 1100px) {
+  body {
+    overflow: auto;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .app {
+    height: auto;
+    max-height: none;
+    min-height: 100%;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-header__persist {
+    max-width: 100%;
+    align-items: stretch;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .persist-toolbar__row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .persist-panel__primary {
+    justify-content: flex-start;
+  }
+
+  .persist-accordion {
+    align-self: stretch;
+    max-width: none;
+  }
+
+  .persist-accordion--toolbar {
+    align-self: stretch;
+    max-width: 100%;
+  }
+
+  .persist-accordion__inner--dropdown {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin-top: 8px;
+    box-shadow: 0 1px 4px rgba(60, 35, 85, 0.06);
+  }
+
+  .persist-accordion__inner {
+    text-align: left;
+  }
+
+  .persist-panel__hint {
+    margin-left: 0;
+  }
+
+  .persist-status {
+    text-align: left;
+  }
+
+  .persist-panel__actions {
+    align-items: stretch;
+  }
+
+  .persist-panel__btn-row {
+    justify-content: flex-start;
+  }
+
+  .app-body {
+    flex-direction: column;
+    overflow: visible;
+    flex: 1 1 auto;
+  }
+
+  .workspace {
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .sidebar {
+    width: 100%;
+    align-self: stretch;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    overflow-y: visible;
+  }
+
+  .workspace-rail {
+    width: 100%;
+    flex-shrink: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    box-shadow: none;
+    max-height: min(55vh, 520px);
+  }
+
+  .workspace-rail-toggle {
+    width: 100%;
+    align-self: stretch;
+    min-height: 0;
+    height: 28px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .workspace-rail-toggle__icon {
+    transform: none;
+    font-size: 0.875rem;
+  }
+
+  .sidebar-toggle {
+    width: 100%;
+    align-self: stretch;
+    min-height: 0;
+    height: 28px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar-toggle__icon {
+    transform: none;
+    font-size: 0.875rem;
+  }
+
+  .main-area {
+    overflow: auto;
+    min-height: 50vh;
+  }
+
+  .canvas-scroll {
+    justify-content: center;
+  }
+}
+
+/* =============================================================================
+   テンプレート共通・モバイル（ビューポート幅 768px 以下）
+   JSON は変更せず、CSS のみ。横並び UI は column 化、LP 内は余白・可読性を上げる。
+   絶対配置ブロックの座標は変えられないため、レイアウトの「組み替え」は公開ビューの zoom で補助。
+   ============================================================================= */
+@media (max-width: 768px) {
+  /* --- lp.html 外枠（lp-frame.css の横並びバーを縦に） --- */
+  .lp-outer-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .lp-outer-link--right {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+
+  .lp-outer-title {
+    text-align: center;
+    order: -1;
+  }
+
+  /* --- エディタヘッダー：横並びを縦積み --- */
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 14px 16px;
+  }
+
+  .app-header__persist {
+    align-items: stretch;
+    max-width: none;
+  }
+
+  .persist-toolbar__row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .persist-accordion--toolbar {
+    align-self: stretch;
+    max-width: none;
+  }
+
+  .persist-accordion__inner--dropdown {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: 0 1px 4px rgba(60, 35, 85, 0.06);
+  }
+
+  .persist-panel__primary {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .persist-panel__primary .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- 編集ビュー切替（PC / スマホ） --- */
+  .viewport-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 12px;
+  }
+
+  .viewport-segment {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .viewport-segment__btn {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .viewport-toolbar__hint {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* --- ワークスペースが横並びのとき（狭いが 1100px 超のケース） --- */
+  .app-body {
+    flex-direction: column;
+  }
+
+  .workspace {
+    flex-direction: column;
+  }
+
+  /* --- LP キャンバス：中央寄せ・余白 --- */
+  .canvas-scroll {
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-area {
+    padding: 16px 14px;
+    align-items: center;
+  }
+
+  .canvas {
+    padding: clamp(16px, 4.5vw, 28px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* コンテナ内を縦積み（実機の狭い幅） */
+  .canvas .canvas-block__nest {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(12px, 2.5vw, 20px);
+    min-height: 0;
+  }
+
+  .canvas .canvas-block__nest > .canvas-block {
+    position: relative !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* --- 公開プレビュー：インライン指定の文字サイズ比を保ったまま一括で少し大きく（zoom） --- */
+  body.nocode-published-mode .canvas {
+    zoom: 1.06;
+  }
+
+  body.nocode-published-mode .canvas .canvas-block__btn {
+    padding: 12px 18px !important;
+  }
+
+  /* --- お問い合わせブロック：余白を広めに（縦レイアウトは既存のまま。文字は zoom で拡大） --- */
+  .canvas-block__contact-form {
+    padding: 20px 18px 22px;
+    gap: max(18px, var(--contact-gap-main-button)) !important;
+  }
+
+  .canvas-block__contact-main {
+    gap: max(14px, var(--contact-gap-title-body)) !important;
+  }
+
+  .canvas-block__contact-body {
+    gap: max(14px, var(--contact-gap-fields)) !important;
+  }
+
+  .canvas-block__contact-title {
+    padding: 6px 0 4px;
+  }
+
+  .canvas-block__contact-fake {
+    padding: 12px 12px;
+  }
+
+  .canvas-block--contact .canvas-block__contact-submit {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
+
+/*
+ * エディタで「スマホ」ビューを選んだときも、ウィンドウ幅が 768px より広いと
+ * @media (max-width:768px) だけではスタイルが当たらない。
+ * body.nocode-edit-view-responsive で同じ LP 向け調整を再現する。
+ */
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas {
+  padding: clamp(16px, 4.5vw, 28px);
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1.06;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .main-area {
+  padding: 16px 14px;
+  align-items: center;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-zoom-stack {
+  align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__btn {
+  padding: 12px 18px !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-block__contact-form {
+  padding: 20px 18px 22px;
+  gap: max(18px, var(--contact-gap-main-button)) !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-block__contact-main {
+  gap: max(14px, var(--contact-gap-title-body)) !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-block__contact-body {
+  gap: max(14px, var(--contact-gap-fields)) !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-block__contact-title {
+  padding: 6px 0 4px;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-block__contact-fake {
+  padding: 12px 12px;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-block--contact .canvas-block__contact-submit {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* -----------------------------------------------------------------------------
+   テンプレート「美容サロン」（salon.*.json）— 768px 以下の追加調整
+   body.nocode-tpl--beautySalon は editor.js の画像フィンガープリントで付与。
+   公開 iframe など class が無い場合はヒーロー画像 src の :has でフォールバック。
+   ----------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas,
+  body.nocode-published-mode .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+    zoom: 1.08;
+  }
+
+  body.nocode-tpl--beautySalon .canvas,
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+    padding-top: clamp(18px, 5vw, 32px);
+    padding-bottom: clamp(18px, 5vw, 32px);
+  }
+
+  /* FEATURE セクション（上から2つ目のコンテナ）— 3カラム画像の視認性 */
+  body.nocode-tpl--beautySalon .canvas > .canvas-block--container:nth-child(2) .canvas-block[data-type="image"],
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:nth-child(2)
+    .canvas-block[data-type="image"] {
+    max-width: calc(100% - 8px);
+    box-sizing: border-box;
+  }
+
+  body.nocode-tpl--beautySalon .canvas > .canvas-block--container:nth-child(2) .canvas-block__img,
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:nth-child(2)
+    .canvas-block__img {
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  /* CONCEPT セクション（3つ目）— 本文の行間を少し広げる */
+  body.nocode-tpl--beautySalon .canvas > .canvas-block--container:nth-child(3) .canvas-block__text,
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:nth-child(3)
+    .canvas-block__text {
+    line-height: 1.58 !important;
+  }
+
+}
+
+/* 美容サロン — エディタ「スマホ」ビューでも上記と同様（768px メディアに依存しない） */
+body.nocode-edit-view-responsive:not(.nocode-published-mode).nocode-tpl--beautySalon .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+  zoom: 1.08;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode).nocode-tpl--beautySalon .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+  padding-top: clamp(18px, 5vw, 32px);
+  padding-bottom: clamp(18px, 5vw, 32px);
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode).nocode-tpl--beautySalon
+  .canvas
+  > .canvas-block--container:nth-child(2)
+  .canvas-block[data-type="image"],
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:nth-child(2)
+  .canvas-block[data-type="image"] {
+  max-width: calc(100% - 8px);
+  box-sizing: border-box;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode).nocode-tpl--beautySalon
+  .canvas
+  > .canvas-block--container:nth-child(2)
+  .canvas-block__img,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:nth-child(2)
+  .canvas-block__img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode).nocode-tpl--beautySalon
+  .canvas
+  > .canvas-block--container:nth-child(3)
+  .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:nth-child(3)
+  .canvas-block__text {
+  line-height: 1.58 !important;
+}
+
+/* =============================================================================
+   美容サロン・スマホ（エディタ）: キャンバス幅の制限のみ。座標は JS（絶対配置）で編集するため
+   top/left を !important で固定しない（ドラッグ不能になるのを防ぐ）。
+   公開プレビュー（.nocode-published-mode）側は従来どおり flex 縦積み。
+   ============================================================================= */
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-scroll,
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-scroll,
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-scroll {
+  justify-content: center !important;
+  align-items: flex-start;
+  width: 100%;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode) .main-area,
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode) .main-area,
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode) .main-area {
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas,
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas,
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  max-width: min(100%, var(--canvas-width));
+  box-sizing: border-box;
+  overflow-x: clip;
+  overflow-y: visible;
+  background-position: top center;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas[style*="background-image"],
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas[style*="background-image"],
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas[style*="background-image"] {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest,
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest,
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas-scroll,
+  body.nocode-published-mode
+    .main-area:has(.canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]))
+    .canvas-scroll {
+    justify-content: center !important;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .main-area,
+  body.nocode-published-mode
+    .main-area:has(.canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])) {
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+    max-width: min(100%, var(--canvas-width));
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-position: top center;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas[style*="background-image"],
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])[style*="background-image"] {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas > .canvas-block--container,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container {
+    position: relative !important;
+    left: 0 !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas > .canvas-block--container .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container
+    .canvas-block__nest {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   美容サロン・スマホ: 全セクションで文字・ボタン等の有効幅を統一／折り返し
+   ヒーロー画像直下の余白 0／ボタンはインライン幅（文字＋パディング）
+   （PC 表示には影響しないよう nocode-edit-view-responsive または max-width:768 のみ）
+   ----------------------------------------------------------------------------- */
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+  --salon-mobile-gutter: max(12px, env(safe-area-inset-left));
+  --salon-mobile-gutter-right: max(12px, env(safe-area-inset-right));
+  /* ヒーロー画像は img の rem 幅で制御（ラッパーで 100% 幅を付けない） */
+  --salon-hero-img-max-width: 20rem;
+  --salon-hero-content-gutter: 0.75rem;
+}
+
+/* 先頭セクション以外のネスト: 従来どおり横ガター */
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:not(:first-child)
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:not(:first-child)
+  > .canvas-block__nest {
+  padding-left: var(--salon-mobile-gutter, max(12px, env(safe-area-inset-left)));
+  padding-right: var(--salon-mobile-gutter-right, max(12px, env(safe-area-inset-right)));
+  box-sizing: border-box;
+}
+
+/* ヒーロー: ネストに横パディングを付けず、画像まわりの見かけ余白を防ぐ。本文・ボタンは子ブロックに rem でガター */
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:not([data-type="image"]),
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:not([data-type="image"]) {
+  padding-left: max(var(--salon-hero-content-gutter, 0.75rem), env(safe-area-inset-left));
+  padding-right: max(var(--salon-hero-content-gutter, 0.75rem), env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container
+  .canvas-block__nest {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest {
+  gap: 0 !important;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  .canvas-block__img,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  .canvas-block__img {
+  display: block;
+  width: min(100%, var(--salon-hero-img-max-width, 20rem));
+  max-width: 100%;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  vertical-align: bottom;
+}
+
+/* ヒーロー TOP 画像直下の余白: グローバル .canvas-block__text の padding-top(4px)・行ボックス上側の見かけ余白を除去 */
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(2)
+  .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(2)
+  .canvas-block__text {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  line-height: 1.25 !important;
+}
+
+/* ヒーロー: 画像直下は余白なしのまま、以降のテキスト同士・テキスト→ボタンだけ段間 */
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  ~ .canvas-block[data-type="text"],
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  ~ .canvas-block[data-type="text"] {
+  margin-top: 10px;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  + .canvas-block[data-type="button"],
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  + .canvas-block[data-type="button"] {
+  margin-top: 20px;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest
+  > .canvas-block,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container
+  .canvas-block__nest
+  > .canvas-block {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* ヒーロー先頭画像: ラッパーを 100% に広げず img の rem 幅に合わせる（上の width:100% を上書き）
+   JS が element.style に付ける height:480px をスマホでは無効化（img が auto で縮んでもラッパーが 480px のままだと下に空きが出る）
+   outline+outline-offset はレイアウトには乗らないが、外側に描画が伸びて見かけの余白になるため無効化。
+   選択中は .canvas-block.is-selected の枠に代わり inset の box-shadow で内側に表示 */
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child {
+  width: fit-content !important;
+  max-width: min(100%, var(--salon-hero-img-max-width, 20rem)) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-self: center !important;
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none;
+  transition: box-shadow 0.12s;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child.is-selected,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child.is-selected {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  .canvas-block__text {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  .canvas-block[data-type="button"]
+  .canvas-block__btn,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  .canvas-block[data-type="button"]
+  .canvas-block__btn {
+  width: auto !important;
+  max-width: 100%;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:nth-child(3)
+  > .canvas-block__nest
+  > .canvas-block--container:last-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:nth-child(3)
+  > .canvas-block__nest
+  > .canvas-block--container:last-child
+  > .canvas-block__nest {
+  gap: 16px;
+}
+
+/* 美容サロン・スマホ: ヒーロー「あなたの美しさを…」のみ少し大きく／日本語の自然な改行（overflow-wrap:anywhere を上書き） */
+body.nocode-tpl--beautySalon.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(3)
+  .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(3)
+  .canvas-block__text {
+  font-size: 36px !important;
+  overflow-wrap: break-word !important;
+  word-break: keep-all !important;
+  line-break: strict !important;
+}
+
+/* -----------------------------------------------------------------------------
+   カフェテンプレ・スマホ（美容サロンと同様: キャンバス幅に合わせ縦積み・中央寄せ）
+   ヒーロー指紋: photo-1495474472287（cafe.*.json の先頭画像）
+   ----------------------------------------------------------------------------- */
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"]) {
+  --cafe-mobile-gutter: max(12px, env(safe-area-inset-left));
+  --cafe-mobile-gutter-right: max(12px, env(safe-area-inset-right));
+  --cafe-hero-img-max-width: 20rem;
+  --cafe-hero-content-gutter: 0.75rem;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:not(:first-child)
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:not(:first-child)
+  > .canvas-block__nest {
+  padding-left: var(--cafe-mobile-gutter, max(12px, env(safe-area-inset-left)));
+  padding-right: var(--cafe-mobile-gutter-right, max(12px, env(safe-area-inset-right)));
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:not([data-type="image"]),
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:not([data-type="image"]) {
+  padding-left: max(var(--cafe-hero-content-gutter, 0.75rem), env(safe-area-inset-left));
+  padding-right: max(var(--cafe-hero-content-gutter, 0.75rem), env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container
+  .canvas-block__nest {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest {
+  gap: 0 !important;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  .canvas-block__img,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  .canvas-block__img {
+  display: block;
+  width: min(100%, var(--cafe-hero-img-max-width, 20rem));
+  max-width: 100%;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  vertical-align: bottom;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(2)
+  .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(2)
+  .canvas-block__text {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  line-height: 1.25 !important;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  ~ .canvas-block[data-type="text"],
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  ~ .canvas-block[data-type="text"] {
+  margin-top: 10px;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  + .canvas-block[data-type="button"],
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  + .canvas-block[data-type="button"] {
+  margin-top: 20px;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest
+  > .canvas-block,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container
+  .canvas-block__nest
+  > .canvas-block {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child {
+  width: fit-content !important;
+  max-width: min(100%, var(--cafe-hero-img-max-width, 20rem)) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-self: center !important;
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  .canvas-block__text {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  .canvas-block[data-type="button"]
+  .canvas-block__btn,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  .canvas-block[data-type="button"]
+  .canvas-block__btn {
+  width: auto !important;
+  max-width: 100%;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--cafe.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:nth-child(3)
+  > .canvas-block__nest
+  > .canvas-block--container:last-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+  > .canvas-block--container:nth-child(3)
+  > .canvas-block__nest
+  > .canvas-block--container:last-child
+  > .canvas-block__nest {
+  gap: 16px;
+}
+
+/* -----------------------------------------------------------------------------
+   サプリメント販売LP・スマホ（カフェと同様: キャンバス幅に合わせ縦積み・中央寄せ）
+   ヒーロー指紋: photo-1587854692152（supplement.*.json の先頭画像）
+   ----------------------------------------------------------------------------- */
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"]) {
+  --supp-mobile-gutter: max(12px, env(safe-area-inset-left));
+  --supp-mobile-gutter-right: max(12px, env(safe-area-inset-right));
+  --supp-hero-img-max-width: 20rem;
+  --supp-hero-content-gutter: 0.75rem;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:not(:first-child)
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:not(:first-child)
+  > .canvas-block__nest {
+  padding-left: var(--supp-mobile-gutter, max(12px, env(safe-area-inset-left)));
+  padding-right: var(--supp-mobile-gutter-right, max(12px, env(safe-area-inset-right)));
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:not([data-type="image"]),
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:not([data-type="image"]) {
+  padding-left: max(var(--supp-hero-content-gutter, 0.75rem), env(safe-area-inset-left));
+  padding-right: max(var(--supp-hero-content-gutter, 0.75rem), env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container
+  .canvas-block__nest {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest {
+  gap: 0 !important;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  .canvas-block__img,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  .canvas-block__img {
+  display: block;
+  width: min(100%, var(--supp-hero-img-max-width, 20rem));
+  max-width: 100%;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  vertical-align: bottom;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(2)
+  .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block:nth-child(2)
+  .canvas-block__text {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  line-height: 1.25 !important;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  ~ .canvas-block[data-type="text"],
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  ~ .canvas-block[data-type="text"] {
+  margin-top: 10px;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  + .canvas-block[data-type="button"],
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="text"]
+  + .canvas-block[data-type="button"] {
+  margin-top: 20px;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container
+  .canvas-block__nest
+  > .canvas-block,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container
+  .canvas-block__nest
+  > .canvas-block {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:first-child
+  > .canvas-block__nest
+  > .canvas-block[data-type="image"]:first-child {
+  width: fit-content !important;
+  max-width: min(100%, var(--supp-hero-img-max-width, 20rem)) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-self: center !important;
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__text,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  .canvas-block__text {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  .canvas-block[data-type="button"]
+  .canvas-block__btn,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  .canvas-block[data-type="button"]
+  .canvas-block__btn {
+  width: auto !important;
+  max-width: 100%;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+body.nocode-tpl--productSalesStory.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas
+  > .canvas-block--container:nth-child(3)
+  > .canvas-block__nest
+  > .canvas-block--container:last-child
+  > .canvas-block__nest,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+  > .canvas-block--container:nth-child(3)
+  > .canvas-block__nest
+  > .canvas-block--container:last-child
+  > .canvas-block__nest {
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+    --salon-mobile-gutter: max(12px, env(safe-area-inset-left));
+    --salon-mobile-gutter-right: max(12px, env(safe-area-inset-right));
+    --salon-hero-img-max-width: 20rem;
+    --salon-hero-content-gutter: 0.75rem;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:not(:first-child)
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:not(:first-child)
+    > .canvas-block__nest {
+    padding-left: var(--salon-mobile-gutter, max(12px, env(safe-area-inset-left)));
+    padding-right: var(--salon-mobile-gutter-right, max(12px, env(safe-area-inset-right)));
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:not([data-type="image"]),
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:not([data-type="image"]) {
+    padding-left: max(var(--salon-hero-content-gutter, 0.75rem), env(safe-area-inset-left));
+    padding-right: max(var(--salon-hero-content-gutter, 0.75rem), env(safe-area-inset-right));
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas > .canvas-block--container .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container
+    .canvas-block__nest {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest {
+    gap: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    .canvas-block__img,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    .canvas-block__img {
+    display: block;
+    width: min(100%, var(--salon-hero-img-max-width, 20rem));
+    max-width: 100%;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    vertical-align: bottom;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(2)
+    .canvas-block__text,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(2)
+    .canvas-block__text {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    line-height: 1.25 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    ~ .canvas-block[data-type="text"],
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    ~ .canvas-block[data-type="text"] {
+    margin-top: 10px;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    + .canvas-block[data-type="button"],
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    + .canvas-block[data-type="button"] {
+    margin-top: 20px;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas > .canvas-block--container .canvas-block__nest > .canvas-block,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container
+    .canvas-block__nest
+    > .canvas-block {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="image"]:first-child,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="image"]:first-child {
+    width: fit-content !important;
+    max-width: min(100%, var(--salon-hero-img-max-width, 20rem)) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+    outline: none !important;
+    outline-offset: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas .canvas-block__text,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    .canvas-block__text {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon .canvas .canvas-block[data-type="button"] .canvas-block__btn,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    .canvas-block[data-type="button"]
+    .canvas-block__btn {
+    width: auto !important;
+    max-width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:nth-child(3)
+    > .canvas-block__nest
+    > .canvas-block--container:last-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:nth-child(3)
+    > .canvas-block__nest
+    > .canvas-block--container:last-child
+    > .canvas-block__nest {
+    gap: 16px;
+  }
+
+  body.nocode-published-mode.nocode-tpl--beautySalon
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(3)
+    .canvas-block__text,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(3)
+    .canvas-block__text {
+    font-size: 36px !important;
+    overflow-wrap: break-word !important;
+    word-break: keep-all !important;
+    line-break: strict !important;
+  }
+
+  /* カフェ・公開（768px 以下）: 美容サロンと同系 */
+  body.nocode-published-mode.nocode-tpl--cafe .canvas,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"]) {
+    --cafe-mobile-gutter: max(12px, env(safe-area-inset-left));
+    --cafe-mobile-gutter-right: max(12px, env(safe-area-inset-right));
+    --cafe-hero-img-max-width: 20rem;
+    --cafe-hero-content-gutter: 0.75rem;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:not(:first-child)
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:not(:first-child)
+    > .canvas-block__nest {
+    padding-left: var(--cafe-mobile-gutter, max(12px, env(safe-area-inset-left)));
+    padding-right: var(--cafe-mobile-gutter-right, max(12px, env(safe-area-inset-right)));
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:not([data-type="image"]),
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:not([data-type="image"]) {
+    padding-left: max(var(--cafe-hero-content-gutter, 0.75rem), env(safe-area-inset-left));
+    padding-right: max(var(--cafe-hero-content-gutter, 0.75rem), env(safe-area-inset-right));
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe .canvas > .canvas-block--container .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container
+    .canvas-block__nest {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest {
+    gap: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    .canvas-block__img,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    .canvas-block__img {
+    display: block;
+    width: min(100%, var(--cafe-hero-img-max-width, 20rem));
+    max-width: 100%;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    vertical-align: bottom;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(2)
+    .canvas-block__text,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(2)
+    .canvas-block__text {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    line-height: 1.25 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    ~ .canvas-block[data-type="text"],
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    ~ .canvas-block[data-type="text"] {
+    margin-top: 10px;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    + .canvas-block[data-type="button"],
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    + .canvas-block[data-type="button"] {
+    margin-top: 20px;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe .canvas > .canvas-block--container .canvas-block__nest > .canvas-block,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container
+    .canvas-block__nest
+    > .canvas-block {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="image"]:first-child,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="image"]:first-child {
+    width: fit-content !important;
+    max-width: min(100%, var(--cafe-hero-img-max-width, 20rem)) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+    outline: none !important;
+    outline-offset: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe .canvas .canvas-block__text,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    .canvas-block__text {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe .canvas .canvas-block[data-type="button"] .canvas-block__btn,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    .canvas-block[data-type="button"]
+    .canvas-block__btn {
+    width: auto !important;
+    max-width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--cafe
+    .canvas
+    > .canvas-block--container:nth-child(3)
+    > .canvas-block__nest
+    > .canvas-block--container:last-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1495474472287"])
+    > .canvas-block--container:nth-child(3)
+    > .canvas-block__nest
+    > .canvas-block--container:last-child
+    > .canvas-block__nest {
+    gap: 16px;
+  }
+
+  /* サプリメント販売LP・公開（768px 以下）: カフェと同系 */
+  body.nocode-published-mode.nocode-tpl--productSalesStory .canvas,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"]) {
+    --supp-mobile-gutter: max(12px, env(safe-area-inset-left));
+    --supp-mobile-gutter-right: max(12px, env(safe-area-inset-right));
+    --supp-hero-img-max-width: 20rem;
+    --supp-hero-content-gutter: 0.75rem;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:not(:first-child)
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:not(:first-child)
+    > .canvas-block__nest {
+    padding-left: var(--supp-mobile-gutter, max(12px, env(safe-area-inset-left)));
+    padding-right: var(--supp-mobile-gutter-right, max(12px, env(safe-area-inset-right)));
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:not([data-type="image"]),
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:not([data-type="image"]) {
+    padding-left: max(var(--supp-hero-content-gutter, 0.75rem), env(safe-area-inset-left));
+    padding-right: max(var(--supp-hero-content-gutter, 0.75rem), env(safe-area-inset-right));
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory .canvas > .canvas-block--container .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container
+    .canvas-block__nest {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest {
+    gap: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    .canvas-block__img,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    .canvas-block__img {
+    display: block;
+    width: min(100%, var(--supp-hero-img-max-width, 20rem));
+    max-width: 100%;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    vertical-align: bottom;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(2)
+    .canvas-block__text,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block:nth-child(2)
+    .canvas-block__text {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    line-height: 1.25 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    ~ .canvas-block[data-type="text"],
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    ~ .canvas-block[data-type="text"] {
+    margin-top: 10px;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    + .canvas-block[data-type="button"],
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="text"]
+    + .canvas-block[data-type="button"] {
+    margin-top: 20px;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory .canvas > .canvas-block--container .canvas-block__nest > .canvas-block,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container
+    .canvas-block__nest
+    > .canvas-block {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="image"]:first-child,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:first-child
+    > .canvas-block__nest
+    > .canvas-block[data-type="image"]:first-child {
+    width: fit-content !important;
+    max-width: min(100%, var(--supp-hero-img-max-width, 20rem)) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+    outline: none !important;
+    outline-offset: 0 !important;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory .canvas .canvas-block__text,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    .canvas-block__text {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory .canvas .canvas-block[data-type="button"] .canvas-block__btn,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    .canvas-block[data-type="button"]
+    .canvas-block__btn {
+    width: auto !important;
+    max-width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+  }
+
+  body.nocode-published-mode.nocode-tpl--productSalesStory
+    .canvas
+    > .canvas-block--container:nth-child(3)
+    > .canvas-block__nest
+    > .canvas-block--container:last-child
+    > .canvas-block__nest,
+  body.nocode-published-mode
+    .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1587854692152"])
+    > .canvas-block--container:nth-child(3)
+    > .canvas-block__nest
+    > .canvas-block--container:last-child
+    > .canvas-block__nest {
+    gap: 16px;
+  }
+}
+
+/* =============================================================================
+   LP レスポンシブ（全ドキュメント共通・JSON 変更なし）
+   768px 以下: 画像の fluid 化、コンテナ幅の上限＋中央寄せ、横並び（絶対配置）の縦積み
+   エディタ「スマホ」ビュー: ビューポート幅に依存せず同様に適用
+   ============================================================================= */
+@media (max-width: 768px) {
+  .canvas {
+    --lp-content-max: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .canvas .canvas-block__img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .canvas > .canvas-block {
+    position: relative !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: min(100%, var(--lp-content-max, 1200px));
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+  }
+
+  .canvas > .canvas-block--container {
+    max-width: min(100%, var(--lp-content-max, 1200px));
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .canvas .canvas-block__nest {
+    max-width: min(100%, var(--lp-content-max, 1200px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas {
+  --lp-content-max: 1200px;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas > .canvas-block--container {
+  max-width: min(100%, var(--lp-content-max, 1200px));
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block__nest {
+  max-width: min(100%, var(--lp-content-max, 1200px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* スマホ編集: 下部の余白（clamp 最大 32px 等）を付けない */
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode).nocode-tpl--beautySalon .canvas,
+body.nocode-edit-view-responsive:not(.nocode-published-mode)
+  .canvas:has(> .canvas-block--container:first-child .canvas-block__img[src*="photo-1560066984"]) {
+  padding-bottom: 0 !important;
+}
+
+/* タッチ端末でブロックドラッグを優先（親スクロールとの競合を抑える） */
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas .canvas-block {
+  touch-action: none;
+}
+
+/* 管理者: テンプレート上書きモーダル（editor.html） */
+.nocode-admin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.nocode-admin-modal[hidden] {
+  display: none !important;
+}
+
+.nocode-admin-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.nocode-admin-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+}
+
+.nocode-admin-modal__title {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.nocode-admin-modal__lead {
+  margin: 0 0 14px;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.nocode-admin-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* editor.html: テンプレート選択と上書き保存をひとまとまりに */
+.template-select-block {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(247, 243, 237, 0.55);
+  box-sizing: border-box;
+}
+
+.template-select-block .field {
+  margin-bottom: 0;
+}
+
+.template-select-block__save {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(60, 35, 85, 0.1);
+}
+
+.template-select-block__save-hint {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.sidebar-hint--template-note {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(122, 203, 197, 0.12);
+  border: 1px solid rgba(122, 203, 197, 0.35);
+  line-height: 1.45;
+}
+
+/* -----------------------------------------------------------------------------
+   スマホ編集モード最終上書き:
+   サイド枠（左ツール／右プロパティ）は固定のまま、
+   main-area だけをスクロールさせる。
+   キャンバス自体はスクロールコンテナにしない。
+   ----------------------------------------------------------------------------- */
+body.nocode-edit-view-responsive:not(.nocode-published-mode) {
+  height: 100% !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .app,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .app-body,
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .workspace {
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  max-height: 100% !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .main-area {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: 100% !important;
+}
+
+body.nocode-edit-view-responsive:not(.nocode-published-mode) .canvas-scroll {
+  overflow: visible !important;
+}

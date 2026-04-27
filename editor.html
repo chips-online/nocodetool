@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="nocode-ai-api-base" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>LP編集（管理者）— ノーコード</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=20260416k" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="app-header__main">
+        <h1 class="app-title">LP編集（管理者）</h1>
+        <p class="app-desc">
+          テンプレートの上書き保存は <code>npm start</code> で起動したサーバー経由のみ可能です。公開閲覧は view.html をご利用ください。
+        </p>
+        <p class="app-nav-extras">
+          <a href="admin.html" class="app-nav-link">ページ管理</a>
+          <a href="index.html" class="app-nav-link">通常エディタ</a>
+        </p>
+      </div>
+      <div class="app-header__persist" id="persist-section" aria-label="保存">
+        <div class="persist-toolbar">
+          <div class="persist-toolbar__row">
+            <div class="persist-panel__primary">
+              <button type="button" class="btn btn-primary" id="persist-save-now" title="このブラウザに保存し、ページ管理・公開ページ（lp.html）にも反映します">
+                今すぐ保存
+              </button>
+              <button type="button" class="btn btn-primary" id="persist-save-server" title="Supabaseに保存して共有URLを発行します">
+                サーバーに保存
+              </button>
+              <button type="button" class="btn" id="persist-new-document" title="ブロックをすべて消して白紙のキャンバスで始めます">
+                新規作成
+              </button>
+            </div>
+            <details class="persist-accordion persist-accordion--toolbar">
+              <summary class="persist-accordion__summary persist-accordion__summary--toolbar">
+                その他の保存・読込
+                <span class="persist-accordion__mark" aria-hidden="true">▼</span>
+              </summary>
+              <div class="persist-accordion__inner persist-accordion__inner--dropdown">
+                <h2 class="persist-panel__title">作業の保存（詳細）</h2>
+                <p class="persist-panel__hint">
+                  編集内容のブラウザへの書き込みは<strong>「保存する」</strong>のときのみです（自動保存はしません）。別PCでは共有されません。
+                </p>
+                <div class="persist-panel__actions">
+                  <div class="persist-panel__btn-row">
+                    <button type="button" class="btn" id="persist-load" title="このブラウザに保存した内容を読み込み">
+                      ブラウザから読込
+                    </button>
+                    <button type="button" class="btn" id="persist-download-json" title="JSONファイルとしてダウンロード">
+                      JSONをダウンロード
+                    </button>
+                  </div>
+                  <div class="persist-panel__btn-row">
+                    <button type="button" class="btn" id="persist-browse-json">
+                      JSONファイルを読み込む
+                    </button>
+                    <input
+                      type="file"
+                      id="persist-file-import"
+                      accept="application/json,.json"
+                      hidden
+                    />
+                    <button type="button" class="btn btn-danger" id="persist-clear-local">
+                      ブラウザの保存を削除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <p class="persist-status persist-status--primary" id="persist-status" aria-live="polite"></p>
+          <div id="persist-server-url-wrap" hidden>
+            <input type="text" id="persist-server-url" class="field__color-hex" readonly />
+            <button type="button" class="btn" id="persist-copy-server-url">URLをコピー</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-body" id="app-body">
+      <aside class="sidebar" id="app-sidebar" aria-label="ブロックと補助ツール">
+        <section class="sidebar-section" aria-label="ブロック追加">
+          <h2 class="sidebar-heading">ブロックを追加</h2>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" data-add="text">テキスト</button>
+            <button type="button" class="btn btn-primary" data-add="image">画像</button>
+            <button type="button" class="btn btn-primary" data-add="button">ボタン</button>
+            <button type="button" class="btn btn-primary" data-add="contact">フォーム</button>
+            <button type="button" class="btn btn-primary" data-add="container">コンテナ</button>
+          </div>
+          <p class="sidebar-hint sidebar-hint--nest">
+            コンテナ選択中にブロックを追加すると、その内側に配置されます。
+          </p>
+        </section>
+
+        <section class="sidebar-section" id="layers-section" aria-label="レイヤー一覧">
+          <h2 class="sidebar-heading">レイヤー</h2>
+          <div class="layers-toolbar">
+            <button type="button" class="layers-toolbar__btn" id="layer-duplicate-selected" disabled>
+              複製
+            </button>
+            <button type="button" class="layers-toolbar__btn layers-toolbar__btn--danger" id="layer-delete-selected" disabled>
+              削除
+            </button>
+          </div>
+          <details class="layers-help">
+            <summary class="layers-help__summary">
+              <span class="layers-help__summary-icon" aria-hidden="true"></span>
+              <span class="layers-help__summary-label">使用方法説明</span>
+            </summary>
+            <div class="layers-help__panel">
+              <p class="layers-hint layers-hint--in-help">
+                <span class="layers-hint__top">リスト上＝奥</span>
+                <span class="layers-hint__sep" aria-hidden="true">／</span>
+                <span class="layers-hint__bottom">下＝手前（新規ブロックは下に追加。↓↑で変更）</span>
+              </p>
+              <p class="layers-hint layers-hint--tree layers-hint--in-help">
+                コンテナは ▶ で内側のレイヤーを開きます。表示の ON/OFF は名前の左のチェックです。
+              </p>
+              <p class="layers-hint layers-hint--keys layers-hint--in-help">
+                左端の <strong>⠿</strong> をドラッグすると、別の親（キャンバス／コンテナの内側）へ移動できます。コンテナの行へドロップで内側へ入ります。<kbd>Shift</kbd> を押しながらコンテナ行へドロップすると、そのコンテナの「前」に兄弟として置きます。
+              </p>
+              <p class="layers-hint layers-hint--keys layers-hint--in-help">
+                選択中のブロック: <kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>（Mac は <kbd>⌘</kbd>）でコピー・ペースト。テキスト入力中はショートカット無効です。
+              </p>
+              <p class="layers-hint layers-hint--keys layers-hint--in-help">
+                <kbd>Ctrl</kbd> / <kbd>⌘</kbd> を押しながらブロックやレイヤーをクリックで複数選択。ドラッグでまとめて移動。他ブロックと左・中央・右（横）や上・中央・下（縦）がそろうとハイライト色の補助線が出ます。
+              </p>
+            </div>
+          </details>
+          <p class="layers-empty" id="layers-empty">ブロックがありません。</p>
+          <ul class="layer-list" id="layer-list" hidden></ul>
+        </section>
+
+        <section class="sidebar-section" aria-label="テンプレート">
+          <h2 class="sidebar-heading">テンプレート</h2>
+          <p class="sidebar-hint">
+            あらかじめ定義した LP 構成をキャンバスに一括で読み込みます（既存のブロックは消えます）。
+          </p>
+          <p class="sidebar-hint sidebar-hint--template-note">
+            テンプレート JSON を更新したのに古い画面のままのときは、<strong>このブラウザに保存した LP（自動保存）</strong>が優先されています。「その他の保存・読込」から<strong>ブラウザの保存を削除</strong>するか、<strong>新規作成</strong>してからテンプレートを選び直してください。
+          </p>
+          <div class="template-select-block">
+            <div class="field">
+              <label for="templateSelect">テンプレートを選択</label>
+              <select
+                id="templateSelect"
+                class="template-select"
+                autocomplete="off"
+                aria-label="テンプレートを選択して読み込み"
+              >
+              </select>
+            </div>
+            <div class="template-select-block__save">
+              <button type="button" class="btn btn-primary btn-block" id="template-save-overwrite">
+                テンプレートを上書き保存（管理者）
+              </button>
+              <p class="sidebar-hint template-select-block__save-hint">
+                選択中のテンプレートに対し、<strong>PC ビュー</strong>を <code>*.desktop.json</code>、<strong>スマホ編集ビュー</strong>を <code>*.mobile.json</code> に保存します。パスワードはサーバーで検証されます。
+              </p>
+            </div>
+          </div>
+          <div class="field" style="margin-top: 10px">
+            <button type="button" class="btn btn-block" id="template-export-console">
+              現在のキャンバスを JSON でコンソール出力
+            </button>
+          </div>
+        </section>
+
+        <section class="sidebar-section ai-text-section" id="ai-text-section" aria-label="AIテキスト生成">
+          <div class="ai-text-section__head">
+            <h2 class="sidebar-heading">AIテキスト</h2>
+            <span class="ai-text-badge" title="サーバー側で OpenAI を呼び出します（キーはブラウザに出ません）">利用制限 5回/日</span>
+          </div>
+          <p class="ai-text-hint">
+            指示・長さ・トーンをまとめて送信します（合計500文字まで）。生成結果は反映先に従ってキャンバスへ入ります。
+          </p>
+          <div class="field">
+            <label for="ai-text-prompt">指示・トピック</label>
+            <textarea
+              id="ai-text-prompt"
+              name="ai-text-prompt"
+              rows="4"
+              placeholder="例：サービス紹介の短いキャッチコピーを3つ、箇条書きで"
+            ></textarea>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="ai-text-length">長さ</label>
+              <select id="ai-text-length" name="ai-text-length">
+                <option value="short">短め</option>
+                <option value="medium" selected>標準</option>
+                <option value="long">長め</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ai-text-tone">トーン</label>
+              <select id="ai-text-tone" name="ai-text-tone">
+                <option value="neutral" selected>ニュートラル</option>
+                <option value="formal">フォーマル</option>
+                <option value="casual">カジュアル</option>
+                <option value="promo">宣伝・訴求</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="ai-text-target">反映先（予定）</label>
+            <select id="ai-text-target" name="ai-text-target">
+              <option value="new-block">新規テキストブロック</option>
+              <option value="selected-text">選択中のテキストブロック</option>
+            </select>
+          </div>
+          <div class="field">
+            <button
+              type="button"
+              id="ai-text-generate-btn"
+              class="btn btn-primary btn-block ai-text-generate-btn"
+            >
+              テキストを生成
+            </button>
+          </div>
+        </section>
+      </aside>
+
+      <button
+        type="button"
+        id="sidebar-toggle"
+        class="sidebar-toggle"
+        aria-expanded="true"
+        aria-controls="app-sidebar"
+        title="左のツールパネルを隠してキャンバスを広く表示"
+      >
+        <span class="sidebar-toggle__icon" aria-hidden="true">⟨</span>
+      </button>
+
+      <div class="workspace" id="workspace">
+        <main class="main-area">
+          <div
+            class="viewport-toolbar"
+            id="viewport-toolbar"
+            role="toolbar"
+            aria-label="編集するレイアウト（PC／スマホ）"
+          >
+            <span class="viewport-toolbar__label">編集ビュー</span>
+            <div class="viewport-segment" role="group" aria-label="キャンバス幅プリセット">
+              <button
+                type="button"
+                id="viewport-desktop-btn"
+                class="viewport-segment__btn is-active"
+                aria-pressed="true"
+                title="PC向けのレイアウトを編集（横幅は右パネルで変更）"
+              >
+                PC
+              </button>
+              <button
+                type="button"
+                id="viewport-responsive-btn"
+                class="viewport-segment__btn"
+                aria-pressed="false"
+                title="スマホ向けのレイアウトを別データとして編集"
+              >
+                スマホ
+              </button>
+            </div>
+            <p class="viewport-toolbar__hint">
+              PC とスマホは別々に保存されます。スマホでは横幅を狭くして配置を調整してください。テンプレート JSON へ書き出すのは PC ビューです。
+            </p>
+          </div>
+          <div class="canvas-zoom-stack" id="canvas-zoom-stack">
+            <div class="canvas-zoom-bar" id="canvas-zoom-bar" role="toolbar" aria-label="キャンバス表示の拡大縮小">
+              <button type="button" id="canvas-zoom-out" class="canvas-zoom-bar__btn" title="縮小" aria-label="縮小">
+                −
+              </button>
+              <input
+                type="range"
+                id="canvas-zoom-range"
+                class="canvas-zoom-bar__range"
+                min="25"
+                max="200"
+                step="5"
+                value="100"
+                aria-label="表示倍率"
+              />
+              <span id="canvas-zoom-pct" class="canvas-zoom-bar__pct">100%</span>
+              <button type="button" id="canvas-zoom-in" class="canvas-zoom-bar__btn" title="拡大" aria-label="拡大">
+                ＋
+              </button>
+              <button type="button" id="canvas-zoom-reset" class="canvas-zoom-bar__btn canvas-zoom-bar__btn--text" title="100%に戻す">
+                100%
+              </button>
+              <button type="button" id="canvas-zoom-fit" class="canvas-zoom-bar__btn canvas-zoom-bar__btn--text" title="表示領域に合わせる">
+                全体表示
+              </button>
+            </div>
+            <div class="canvas-zoom-viewport" id="canvas-zoom-viewport">
+              <div class="canvas-zoom-scale" id="canvas-zoom-scale">
+                <div class="canvas-scroll">
+                  <div
+                    id="canvas"
+                    class="canvas"
+                    role="region"
+                    aria-label="編集キャンバス"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <button
+          type="button"
+          id="workspace-rail-toggle"
+          class="workspace-rail-toggle"
+          aria-expanded="true"
+          aria-controls="workspace-rail"
+          title="右パネルを隠してキャンバスを広く表示"
+        >
+          <span class="workspace-rail-toggle__icon" aria-hidden="true">⟨</span>
+        </button>
+
+        <aside class="workspace-rail" id="workspace-rail" aria-label="キャンバス設定とプロパティ">
+          <section class="sidebar-section" id="canvas-section" aria-label="キャンバスサイズ">
+            <h2 class="sidebar-heading">キャンバス</h2>
+            <div class="field">
+              <label for="canvas-width-input">横幅（px）</label>
+              <input
+                type="number"
+                id="canvas-width-input"
+                min="400"
+                max="3840"
+                step="1"
+                value="1200"
+              />
+            </div>
+            <p class="canvas-height-hint">
+              編集エリアの論理幅です。スマホ用レイアウトは上部の「スマホ」ビューで編集します。
+            </p>
+            <div class="field">
+              <label for="canvas-height-input">高さ（px）</label>
+              <input
+                type="number"
+                id="canvas-height-input"
+                min="200"
+                max="16000"
+                step="1"
+                value="480"
+              />
+            </div>
+            <p class="canvas-height-hint">
+              ワークエリアの高さの目安です。ブロックが下にはみ出すときは、その分だけ自動で伸びます。
+            </p>
+            <div class="field field--colorPair">
+              <label for="canvas-bg-color-hex-input">背景色</label>
+              <div class="field__color-row">
+                <input type="color" id="canvas-bg-color-input" value="#fffbf6" />
+                <input
+                  type="text"
+                  id="canvas-bg-color-hex-input"
+                  class="field__color-hex"
+                  spellcheck="false"
+                  autocomplete="off"
+                  placeholder="#RRGGBB"
+                  title="16進カラー（#RGB または #RRGGBB。先頭の#は省略可能）"
+                  value="#fffbf6"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="canvas-bg-image-url">背景画像 URL</label>
+              <input type="url" id="canvas-bg-image-url" placeholder="https://..." />
+            </div>
+            <div class="field">
+              <label for="canvas-bg-image-file">背景画像（ファイル）</label>
+              <input type="file" id="canvas-bg-image-file" accept="image/*" />
+            </div>
+            <div class="field">
+              <button type="button" id="canvas-bg-image-clear" class="btn btn-danger btn-block">
+                背景画像を削除
+              </button>
+            </div>
+            <div class="field">
+              <label for="canvas-bg-fit-select">背景画像の表示</label>
+              <select id="canvas-bg-fit-select">
+                <option value="cover">領域を覆う（cover）</option>
+                <option value="contain">全体を表示（contain）</option>
+                <option value="repeat">タイル（繰り返し）</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="sidebar-section" id="props-section">
+            <h2 class="sidebar-heading">プロパティ</h2>
+            <p class="props-empty" id="props-empty">キャンバス上の要素を選択してください。</p>
+            <div class="props-form" id="props-form" hidden></div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div id="nocode-template-save-modal" class="nocode-admin-modal" hidden>
+    <div class="nocode-admin-modal__backdrop" tabindex="-1"></div>
+    <div
+      class="nocode-admin-modal__panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="nocode-template-save-title"
+    >
+      <h2 class="nocode-admin-modal__title" id="nocode-template-save-title">テンプレート上書き保存</h2>
+      <p class="nocode-admin-modal__lead">
+        管理者パスワードを入力してください（サーバー側の環境変数と照合されます）。
+      </p>
+      <div class="field">
+        <label for="nocode-template-save-password">パスワード</label>
+        <input
+          type="password"
+          id="nocode-template-save-password"
+          name="nocode-template-save-password"
+          autocomplete="current-password"
+        />
+      </div>
+      <div class="nocode-admin-modal__actions">
+        <button type="button" class="btn" id="nocode-template-save-cancel">キャンセル</button>
+        <button type="button" class="btn btn-primary" id="nocode-template-save-confirm">認証して保存</button>
+      </div>
+      <p class="persist-status" id="nocode-template-save-msg" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script src="block-document-schema.js?v=20260414b"></script>
+  <script src="pages-storage.js?v=20260414b"></script>
+  <script type="module" src="editor.js?v=20260416k"></script>
+  <script type="module" src="template-system.js?v=20260414b"></script>
+  <script src="editor-template-api.js?v=20260416n" defer></script>
+  <script src="canvas-zoom.js?v=20260416" defer></script>
+  <script src="ai-text-generate.js?v=20260416" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js?v=20260425a" defer></script>
+  <script src="lp-publish.js?v=20260425a" defer></script>
+</body>
+</html>

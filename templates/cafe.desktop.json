@@ -1,0 +1,688 @@
+{
+  "name": "カフェ",
+  "canvas": {
+    "widthPx": 1200,
+    "floorHeightPx": 400,
+    "backgroundColor": "#f5f0e8",
+    "backgroundImageSrc": "",
+    "backgroundImageFit": "cover"
+  },
+  "data": [
+    {
+      "type": "container",
+      "x": 0,
+      "y": 0,
+      "zIndex": 1,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 1000,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#efe6dc"
+      },
+      "children": [
+        {
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=82",
+          "widthPx": 1200,
+          "heightPx": 480
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 496,
+          "zIndex": 2,
+          "text": "Fresh Coffee, Good Time",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 22,
+            "color": "#6b5a48",
+            "fontWeight": "400",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 540,
+          "zIndex": 2,
+          "text": "落ち着いた時間を、あなたに",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 32,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 150,
+          "y": 612,
+          "zIndex": 2,
+          "text": "自家焙煎のスペシャルティコーヒーと、季節のスイーツ。木の温もりに包まれた空間で、日常を少し離れたひとときをお過ごしください。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 17,
+            "color": "#5c4a3a",
+            "fontWeight": "400",
+            "widthPx": 900,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.65
+          }
+        },
+        {
+          "type": "button",
+          "x": 460,
+          "y": 760,
+          "zIndex": 3,
+          "label": "メニューを見る",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontWeight": "700",
+            "fontSizePx": 16,
+            "color": "#ffffff",
+            "backgroundColor": "#6b5344",
+            "backgroundColorSolid": "#6b5344",
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 32,
+            "borderRadiusPx": 999,
+            "borderWidthPx": 0,
+            "borderColor": "#1e293b",
+            "widthPx": 280,
+            "heightPx": 0,
+            "lineHeight": 1.45
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 1000,
+      "zIndex": 2,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 820,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#faf7f2"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 72,
+          "y": 52,
+          "zIndex": 1,
+          "text": "MENU",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 13,
+            "color": "#8a7a68",
+            "fontWeight": "600",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": 0.4,
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 88,
+          "zIndex": 1,
+          "text": "季節の味わいをご紹介",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 28,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 132,
+          "zIndex": 1,
+          "text": "Taste the season",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 14,
+            "color": "#9a8a78",
+            "fontWeight": "400",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "type": "image",
+          "x": 48,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=82",
+          "widthPx": 352,
+          "heightPx": 220
+        },
+        {
+          "type": "image",
+          "x": 424,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=82",
+          "widthPx": 352,
+          "heightPx": 220
+        },
+        {
+          "type": "image",
+          "x": 800,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=82",
+          "widthPx": 352,
+          "heightPx": 220
+        },
+        {
+          "type": "text",
+          "x": 48,
+          "y": 428,
+          "zIndex": 3,
+          "text": "スペシャルティコーヒー",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 28,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 352,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "type": "text",
+          "x": 424,
+          "y": 428,
+          "zIndex": 3,
+          "text": "季節のケーキ＆スイーツ",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 28,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 352,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 428,
+          "zIndex": 3,
+          "text": "サンドイッチ・軽食",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 28,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 352,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "type": "text",
+          "x": 48,
+          "y": 476,
+          "zIndex": 4,
+          "text": "エチオピア・グアテマラなど、豆の個性を引き出す浅煎りから深煎りまで。エスプレッソ・ドリップ・カフェラテをご用意しています。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 15,
+            "color": "#5c4a3a",
+            "fontWeight": "400",
+            "widthPx": 352,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.55
+          }
+        },
+        {
+          "type": "text",
+          "x": 424,
+          "y": 476,
+          "zIndex": 4,
+          "text": "パティシエ特製のタルトやチーズケーキ。季節のフルーツを使った限定メニューもお楽しみください。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 15,
+            "color": "#5c4a3a",
+            "fontWeight": "400",
+            "widthPx": 352,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.55
+          }
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 476,
+          "zIndex": 4,
+          "text": "モーニング・ランチにぴったりのホットサンドやキッシュ。テイクアウトも承ります。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 15,
+            "color": "#5c4a3a",
+            "fontWeight": "400",
+            "widthPx": 352,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.55
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 1820,
+      "zIndex": 3,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 640,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#f0e8df"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 72,
+          "y": 52,
+          "zIndex": 1,
+          "text": "STORY",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 12,
+            "color": "#8a7a68",
+            "fontWeight": "600",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.4,
+            "letterSpacing": 0.45,
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 84,
+          "zIndex": 1,
+          "text": "カフェのこだわり",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 30,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.3
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 128,
+          "zIndex": 1,
+          "text": "From bean to cup",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 14,
+            "color": "#9a8a78",
+            "fontWeight": "400",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "type": "image",
+          "x": 72,
+          "y": 176,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1000&q=82",
+          "widthPx": 520,
+          "heightPx": 340
+        },
+        {
+          "type": "text",
+          "x": 640,
+          "y": 196,
+          "zIndex": 3,
+          "text": "厳選したスペシャルティ豆は、週に数回、店内の小型焙煎機で焙煎。鮮度の高い豆だけを豆の状態で保管し、ご注文後に挽きたてで抽出します。苦みと酸味のバランス、香りの立ち上がりまで、一杯ごとに丁寧に調整しています。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 17,
+            "color": "#4a3f36",
+            "fontWeight": "400",
+            "widthPx": 488,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.65
+          }
+        },
+        {
+          "type": "text",
+          "x": 640,
+          "y": 376,
+          "zIndex": 3,
+          "text": "店内は無垢材と間接照明で、長居したくなる落ち着きの空間に。コンセント席・カウンター席をご用意し、おひとり様もグループもゆったりとお過ごしいただけます。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#5c4a3a",
+            "fontWeight": "400",
+            "widthPx": 488,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.55
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 2460,
+      "zIndex": 4,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 420,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#ffffff"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 72,
+          "y": 48,
+          "zIndex": 1,
+          "text": "GALLERY",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 13,
+            "color": "#8a7a68",
+            "fontWeight": "600",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": 0.4,
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 84,
+          "zIndex": 1,
+          "text": "店内の雰囲気",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 28,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 124,
+          "zIndex": 1,
+          "text": "A quiet moment",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 14,
+            "color": "#9a8a78",
+            "fontWeight": "400",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "type": "image",
+          "x": 48,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=82",
+          "widthPx": 352,
+          "heightPx": 220
+        },
+        {
+          "type": "image",
+          "x": 424,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=82",
+          "widthPx": 352,
+          "heightPx": 220
+        },
+        {
+          "type": "image",
+          "x": 800,
+          "y": 188,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=82",
+          "widthPx": 352,
+          "heightPx": 220
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 2880,
+      "zIndex": 5,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 400,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#d4c4b0"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 120,
+          "y": 48,
+          "zIndex": 1,
+          "text": "VISIT",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 12,
+            "color": "#5c4a3a",
+            "fontWeight": "600",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": 0.45,
+            "textTransform": "uppercase"
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 80,
+          "zIndex": 1,
+          "text": "ご来店・ご予約はお気軽に",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 26,
+            "color": "#3d2e24",
+            "fontWeight": "700",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 124,
+          "zIndex": 1,
+          "text": "We are here for you",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 15,
+            "color": "#6b5a48",
+            "fontWeight": "400",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "type": "button",
+          "x": 250,
+          "y": 188,
+          "zIndex": 2,
+          "label": "席の予約をする",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontWeight": "700",
+            "fontSizePx": 16,
+            "color": "#ffffff",
+            "backgroundColor": "#6b5344",
+            "backgroundColorSolid": "#6b5344",
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 28,
+            "borderRadiusPx": 999,
+            "borderWidthPx": 0,
+            "borderColor": "#1e293b",
+            "widthPx": 300,
+            "heightPx": 0,
+            "lineHeight": 1.45
+          }
+        },
+        {
+          "type": "button",
+          "x": 650,
+          "y": 188,
+          "zIndex": 2,
+          "label": "アクセスを見る",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontWeight": "700",
+            "fontSizePx": 16,
+            "color": "#3d2e24",
+            "backgroundColor": "#faf7f2",
+            "backgroundColorSolid": "#faf7f2",
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 28,
+            "borderRadiusPx": 999,
+            "borderWidthPx": 1,
+            "borderColor": "#6b5344",
+            "widthPx": 300,
+            "heightPx": 0,
+            "lineHeight": 1.45
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 3280,
+      "zIndex": 6,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 0,
+        "widthPx": 1200,
+        "heightPx": 160,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#3a3229"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 72,
+          "y": 44,
+          "zIndex": 1,
+          "text": "Café Bloom",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 20,
+            "color": "#efe6dc",
+            "fontWeight": "700",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "type": "text",
+          "x": 72,
+          "y": 76,
+          "zIndex": 1,
+          "text": "〒150-0001 東京都渋谷区〇〇 1-15-8 ／ 10:00–19:00（L.O. 18:30）／ 不定休",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 14,
+            "color": "#d4c9bc",
+            "fontWeight": "400",
+            "widthPx": 1056,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.5
+          }
+        }
+      ]
+    }
+  ]
+}

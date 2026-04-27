@@ -1,0 +1,1595 @@
+{
+  "version": 1,
+  "schemaVersion": 2,
+  "layoutMode": "dualViewport",
+  "editingViewport": "responsive",
+  "activeTemplateKey": "beautySalon",
+  "viewports": {
+    "desktop": {
+      "canvas": {
+        "widthPx": 1200,
+        "floorHeightPx": 400,
+        "backgroundColor": "#ffffff",
+        "backgroundImageSrc": "",
+        "backgroundImageFit": "cover"
+      },
+      "blocks": [
+        {
+          "id": "blk-1",
+          "type": "container",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "650px",
+            "width": "1200px",
+            "height": "977px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 650,
+            "widthPx": 1200,
+            "heightPx": 977,
+            "paddingPx": 20,
+            "backgroundColor": "#faf7f9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-2",
+              "type": "image",
+              "x": 0,
+              "y": 0,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=82",
+              "width": "1201px",
+              "height": "492px"
+            },
+            {
+              "id": "blk-3",
+              "type": "text",
+              "x": 72,
+              "y": 574,
+              "zIndex": 2,
+              "text": "Relax & Beauty",
+              "style": {
+                "color": "#6b5a6e",
+                "fontWeight": "400",
+                "fontFamily": "cursive",
+                "textAlign": "center",
+                "fontSize": "24px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-4",
+              "type": "text",
+              "x": 72,
+              "y": 618,
+              "zIndex": 2,
+              "text": "あなたの美しさを、​ひとつ上のステージへ",
+              "style": {
+                "color": "#3d2c3f",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-5",
+              "type": "text",
+              "x": 100,
+              "y": 678,
+              "zIndex": 2,
+              "text": "表参道の隠れ家サロン。カウンセリングから仕上げまで、一人ひとりに合わせた施術で「なりたい自分」へ。カット・カラー・ヘッドスパ・ブライダルまで幅広く対応しています。",
+              "style": {
+                "color": "#4a3f4d",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "17px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.65
+              }
+            },
+            {
+              "id": "blk-6",
+              "type": "button",
+              "x": 400,
+              "y": 766,
+              "zIndex": 3,
+              "label": "ご予約はこちら",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#e85d75",
+                "backgroundColorSolid": "#e85d75",
+                "paddingVerticalPx": 16,
+                "paddingHorizontalPx": 36,
+                "borderWidthPx": 0,
+                "borderColor": "#1e293b",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "center",
+                "fontSize": "16px",
+                "width": "400px",
+                "heightPx": 0,
+                "borderRadius": "999px",
+                "lineHeight": 1.45
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-7",
+          "type": "container",
+          "x": 0,
+          "y": 980,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "760px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 760,
+            "paddingPx": 20,
+            "backgroundColor": "#ffffff",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-8",
+              "type": "text",
+              "x": 72,
+              "y": 56,
+              "zIndex": 1,
+              "text": "FEATURE",
+              "style": {
+                "color": "#8a7a8f",
+                "fontWeight": "600",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "13px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.35em",
+                "textTransform": "uppercase"
+              }
+            },
+            {
+              "id": "blk-9",
+              "type": "text",
+              "x": 72,
+              "y": 92,
+              "zIndex": 1,
+              "text": "サロンが選ばれる理由",
+              "style": {
+                "color": "#2f2435",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "28px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-10",
+              "type": "text",
+              "x": 72,
+              "y": 132,
+              "zIndex": 1,
+              "text": "Why we shine",
+              "style": {
+                "color": "#9a8aa0",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-11",
+              "type": "container",
+              "x": 50,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "400px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 400,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-12",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "src": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=82",
+                  "width": "352px",
+                  "height": "219px"
+                },
+                {
+                  "id": "blk-13",
+                  "type": "text",
+                  "x": 0,
+                  "y": 240,
+                  "zIndex": 3,
+                  "text": "丁寧なカウンセリング",
+                  "style": {
+                    "color": "#3d2c3f",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.45
+                  }
+                },
+                {
+                  "id": "blk-14",
+                  "type": "text",
+                  "x": 0,
+                  "y": 322,
+                  "zIndex": 4,
+                  "text": "髪質・ライフスタイル・ご予算を伺い、最適なメニューをご提案します。初回はじっくりお話しください。",
+                  "style": {
+                    "color": "#5c4d5f",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "15px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.55
+                  }
+                }
+              ]
+            },
+            {
+              "id": "blk-15",
+              "type": "container",
+              "x": 424,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "400px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 400,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-16",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "src": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=82",
+                  "width": "352px",
+                  "height": "219px"
+                },
+                {
+                  "id": "blk-17",
+                  "type": "text",
+                  "x": 0,
+                  "y": 240,
+                  "zIndex": 3,
+                  "text": "厳選した薬剤",
+                  "style": {
+                    "color": "#3d2c3f",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.45
+                  }
+                },
+                {
+                  "id": "blk-18",
+                  "type": "text",
+                  "x": 0,
+                  "y": 328,
+                  "zIndex": 4,
+                  "text": "国内ブランドを中心に、ダメージレスな施術を実現。敏感肌の方にもご相談いただけます。",
+                  "style": {
+                    "color": "#5c4d5f",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "15px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.55
+                  }
+                }
+              ]
+            },
+            {
+              "id": "blk-19",
+              "type": "container",
+              "x": 798,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "400px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 400,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-20",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "src": "https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&w=800&q=82",
+                  "width": "352px",
+                  "height": "219px"
+                },
+                {
+                  "id": "blk-21",
+                  "type": "text",
+                  "x": 0,
+                  "y": 240,
+                  "zIndex": 3,
+                  "text": "アフターケア充実",
+                  "style": {
+                    "color": "#3d2c3f",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.45
+                  }
+                },
+                {
+                  "id": "blk-22",
+                  "type": "text",
+                  "x": 0,
+                  "y": 328,
+                  "zIndex": 4,
+                  "text": "ホームケアの方法や次回のご予約まで、LINEで気軽にご連絡いただけます。",
+                  "style": {
+                    "color": "#5c4d5f",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "15px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.55
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blk-23",
+          "type": "container",
+          "x": 0,
+          "y": 1705,
+          "zIndex": 3,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "620px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 620,
+            "paddingPx": 20,
+            "backgroundColor": "#f7f2f5",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-24",
+              "type": "text",
+              "x": 72,
+              "y": 56,
+              "zIndex": 1,
+              "text": "CONCEPT",
+              "style": {
+                "color": "#8a7a8f",
+                "fontWeight": "600",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "13px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.35em",
+                "textTransform": "uppercase"
+              }
+            },
+            {
+              "id": "blk-25",
+              "type": "text",
+              "x": 72,
+              "y": 88,
+              "zIndex": 1,
+              "text": "美しさと、おもてなしを。",
+              "style": {
+                "color": "#2f2435",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "30px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-26",
+              "type": "text",
+              "x": 72,
+              "y": 136,
+              "zIndex": 1,
+              "text": "Our philosophy",
+              "style": {
+                "color": "#9a8aa0",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-27",
+              "type": "container",
+              "x": 72,
+              "y": 176,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "1056px",
+                "minHeight": "360px",
+                "width": "1056px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 1056,
+                "minHeightPx": 360,
+                "widthPx": 1056,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-28",
+                  "type": "container",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "style": {
+                    "minWidth": "520px",
+                    "minHeight": "340px",
+                    "width": "520px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 520,
+                    "minHeightPx": 340,
+                    "widthPx": 520,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-29",
+                      "type": "image",
+                      "x": 0,
+                      "y": 0,
+                      "zIndex": 2,
+                      "src": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=82",
+                      "width": "520px",
+                      "height": "340px"
+                    }
+                  ]
+                },
+                {
+                  "id": "blk-30",
+                  "type": "container",
+                  "x": 536,
+                  "y": 0,
+                  "zIndex": 1,
+                  "style": {
+                    "minWidth": "488px",
+                    "minHeight": "220px",
+                    "width": "488px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 488,
+                    "minHeightPx": 220,
+                    "widthPx": 488,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-31",
+                      "type": "text",
+                      "x": 0,
+                      "y": 16,
+                      "zIndex": 3,
+                      "text": "「美しさ」と「心地よさ」の両立を大切にしています。忙しい日常から離れ、香りと音楽に包まれた空間で、自分へのご褒美時間をどうぞ。スタッフ全員が国家資格を保有し、最新トレンドと確かな技術でお迎えします。",
+                      "style": {
+                        "color": "#4a3f4d",
+                        "fontWeight": "400",
+                        "fontFamily": "sans-serif",
+                        "textAlign": "left",
+                        "fontSize": "17px",
+                        "width": "488px",
+                        "heightPx": 0,
+                        "lineHeight": 1.65
+                      }
+                    },
+                    {
+                      "id": "blk-32",
+                      "type": "text",
+                      "x": 0,
+                      "y": 154,
+                      "zIndex": 3,
+                      "text": "完全予約制・個室ブース完備。お子様連れの方、男性のお客様も安心してご利用いただけます。",
+                      "style": {
+                        "color": "#5c4d5f",
+                        "fontWeight": "400",
+                        "fontFamily": "sans-serif",
+                        "textAlign": "left",
+                        "fontSize": "16px",
+                        "width": "488px",
+                        "heightPx": 0,
+                        "lineHeight": 1.55
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blk-33",
+          "type": "container",
+          "x": 0,
+          "y": 2326,
+          "zIndex": 4,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "340px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 340,
+            "paddingPx": 20,
+            "backgroundColor": "#eeb4c3",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-34",
+              "type": "text",
+              "x": 120,
+              "y": 52,
+              "zIndex": 1,
+              "text": "RESERVATION",
+              "style": {
+                "color": "#6b5060",
+                "fontWeight": "600",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "12px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.4em",
+                "textTransform": "uppercase"
+              }
+            },
+            {
+              "id": "blk-35",
+              "type": "text",
+              "x": 72,
+              "y": 84,
+              "zIndex": 1,
+              "text": "まずは無料カウンセリングから。あなたに合うスタイルを一緒に見つけましょう。",
+              "style": {
+                "color": "#3d2438",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "20px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-36",
+              "type": "text",
+              "x": 120,
+              "y": 132,
+              "zIndex": 1,
+              "text": "Book your moment",
+              "style": {
+                "color": "#7a6575",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-37",
+              "type": "button",
+              "x": 400,
+              "y": 178,
+              "zIndex": 2,
+              "label": "カウンセリングを予約",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#ff6b35",
+                "backgroundColorSolid": "#ff6b35",
+                "paddingVerticalPx": 16,
+                "paddingHorizontalPx": 48,
+                "borderWidthPx": 0,
+                "borderColor": "#1e293b",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "center",
+                "fontSize": "17px",
+                "width": "400px",
+                "heightPx": 0,
+                "borderRadius": "999px",
+                "lineHeight": 1.45
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-38",
+          "type": "container",
+          "x": 0,
+          "y": 2590,
+          "zIndex": 5,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "160px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 160,
+            "paddingPx": 20,
+            "backgroundColor": "#2d2438",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-39",
+              "type": "text",
+              "x": 72,
+              "y": 41,
+              "zIndex": 1,
+              "text": "Lumière Beauty Salon",
+              "style": {
+                "color": "#d8c8d4",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "15px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.12em"
+              }
+            },
+            {
+              "id": "blk-40",
+              "type": "text",
+              "x": 72,
+              "y": 76,
+              "zIndex": 1,
+              "text": "© 2026  東京都〇〇区〇〇 1-2-3 ／ 11:00–20:00（不定休）",
+              "style": {
+                "color": "#e8e0ea",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "responsive": {
+      "canvas": {
+        "widthPx": 400,
+        "floorHeightPx": 400,
+        "backgroundColor": "#ffffff",
+        "backgroundImageSrc": "",
+        "backgroundImageFit": "cover"
+      },
+      "blocks": [
+        {
+          "id": "blk-1",
+          "type": "container",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "650px",
+            "width": "1200px",
+            "height": "977px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 650,
+            "widthPx": 1200,
+            "heightPx": 977,
+            "paddingPx": 20,
+            "backgroundColor": "#faf7f9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-2",
+              "type": "image",
+              "x": 0,
+              "y": 0,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=82",
+              "width": "1200px",
+              "heightPx": 0
+            },
+            {
+              "id": "blk-3",
+              "type": "text",
+              "x": 0,
+              "y": 500,
+              "zIndex": 2,
+              "text": "Relax & Beauty",
+              "style": {
+                "color": "#6b5a6e",
+                "fontWeight": "400",
+                "fontFamily": "cursive",
+                "textAlign": "center",
+                "fontSize": "24px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-4",
+              "type": "text",
+              "x": 0,
+              "y": 544,
+              "zIndex": 2,
+              "text": "あなたの美しさを、​ひとつ上のステージへ",
+              "style": {
+                "color": "#3d2c3f",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-5",
+              "type": "text",
+              "x": 0,
+              "y": 537,
+              "zIndex": 2,
+              "text": "表参道の隠れ家サロン。カウンセリングから仕上げまで、一人ひとりに合わせた施術で「なりたい自分」へ。カット・カラー・ヘッドスパ・ブライダルまで幅広く対応しています。",
+              "style": {
+                "color": "#4a3f4d",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "17px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.65
+              }
+            },
+            {
+              "id": "blk-6",
+              "type": "button",
+              "x": 0,
+              "y": 610,
+              "zIndex": 3,
+              "label": "ご予約はこちら",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#e85d75",
+                "backgroundColorSolid": "#e85d75",
+                "paddingVerticalPx": 16,
+                "paddingHorizontalPx": 36,
+                "borderWidthPx": 0,
+                "borderColor": "#1e293b",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "center",
+                "fontSize": "16px",
+                "width": "400px",
+                "heightPx": 0,
+                "borderRadius": "999px",
+                "lineHeight": 1.45
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-7",
+          "type": "container",
+          "x": 0,
+          "y": 697,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "760px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 760,
+            "paddingPx": 20,
+            "backgroundColor": "#ffffff",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-8",
+              "type": "text",
+              "x": 0,
+              "y": 56,
+              "zIndex": 1,
+              "text": "FEATURE",
+              "style": {
+                "color": "#8a7a8f",
+                "fontWeight": "600",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "13px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.35em",
+                "textTransform": "uppercase"
+              }
+            },
+            {
+              "id": "blk-9",
+              "type": "text",
+              "x": 0,
+              "y": 92,
+              "zIndex": 1,
+              "text": "サロンが選ばれる理由",
+              "style": {
+                "color": "#2f2435",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "28px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-10",
+              "type": "text",
+              "x": 0,
+              "y": 132,
+              "zIndex": 1,
+              "text": "Why we shine",
+              "style": {
+                "color": "#9a8aa0",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-11",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "400px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 400,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-12",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "src": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=82",
+                  "width": "352px",
+                  "height": "219px"
+                },
+                {
+                  "id": "blk-13",
+                  "type": "text",
+                  "x": 0,
+                  "y": 277,
+                  "zIndex": 3,
+                  "text": "丁寧なカウンセリング",
+                  "style": {
+                    "color": "#3d2c3f",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.45
+                  }
+                },
+                {
+                  "id": "blk-14",
+                  "type": "text",
+                  "x": 0,
+                  "y": 288,
+                  "zIndex": 4,
+                  "text": "髪質・ライフスタイル・ご予算を伺い、最適なメニューをご提案します。初回はじっくりお話しください。",
+                  "style": {
+                    "color": "#5c4d5f",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "15px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.55
+                  }
+                }
+              ]
+            },
+            {
+              "id": "blk-15",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "400px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 400,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-16",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "src": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=82",
+                  "width": "352px",
+                  "height": "219px"
+                },
+                {
+                  "id": "blk-17",
+                  "type": "text",
+                  "x": 0,
+                  "y": 240,
+                  "zIndex": 3,
+                  "text": "厳選した薬剤",
+                  "style": {
+                    "color": "#3d2c3f",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.45
+                  }
+                },
+                {
+                  "id": "blk-18",
+                  "type": "text",
+                  "x": 0,
+                  "y": 288,
+                  "zIndex": 4,
+                  "text": "国内ブランドを中心に、ダメージレスな施術を実現。敏感肌の方にもご相談いただけます。",
+                  "style": {
+                    "color": "#5c4d5f",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "15px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.55
+                  }
+                }
+              ]
+            },
+            {
+              "id": "blk-19",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "400px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 400,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-20",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "src": "https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&w=800&q=82",
+                  "width": "352px",
+                  "height": "219px"
+                },
+                {
+                  "id": "blk-21",
+                  "type": "text",
+                  "x": 0,
+                  "y": 240,
+                  "zIndex": 3,
+                  "text": "アフターケア充実",
+                  "style": {
+                    "color": "#3d2c3f",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.45
+                  }
+                },
+                {
+                  "id": "blk-22",
+                  "type": "text",
+                  "x": 0,
+                  "y": 288,
+                  "zIndex": 4,
+                  "text": "ホームケアの方法や次回のご予約まで、LINEで気軽にご連絡いただけます。",
+                  "style": {
+                    "color": "#5c4d5f",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "15px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.55
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blk-23",
+          "type": "container",
+          "x": 0,
+          "y": 2060,
+          "zIndex": 3,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "620px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 620,
+            "paddingPx": 20,
+            "backgroundColor": "#f7f2f5",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-24",
+              "type": "text",
+              "x": 0,
+              "y": 56,
+              "zIndex": 1,
+              "text": "CONCEPT",
+              "style": {
+                "color": "#8a7a8f",
+                "fontWeight": "600",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "13px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.35em",
+                "textTransform": "uppercase"
+              }
+            },
+            {
+              "id": "blk-25",
+              "type": "text",
+              "x": 0,
+              "y": 88,
+              "zIndex": 1,
+              "text": "美しさと、おもてなしを。",
+              "style": {
+                "color": "#2f2435",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "30px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-26",
+              "type": "text",
+              "x": 0,
+              "y": 136,
+              "zIndex": 1,
+              "text": "Our philosophy",
+              "style": {
+                "color": "#9a8aa0",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-27",
+              "type": "container",
+              "x": 0,
+              "y": 150,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "1056px",
+                "minHeight": "360px",
+                "width": "1056px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 1056,
+                "minHeightPx": 360,
+                "widthPx": 1056,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-28",
+                  "type": "container",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "style": {
+                    "minWidth": "520px",
+                    "minHeight": "340px",
+                    "width": "520px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 520,
+                    "minHeightPx": 340,
+                    "widthPx": 520,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-29",
+                      "type": "image",
+                      "x": 0,
+                      "y": 0,
+                      "zIndex": 2,
+                      "src": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=82",
+                      "width": "520px",
+                      "height": "340px"
+                    }
+                  ]
+                },
+                {
+                  "id": "blk-30",
+                  "type": "container",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "style": {
+                    "minWidth": "488px",
+                    "minHeight": "220px",
+                    "width": "488px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 488,
+                    "minHeightPx": 220,
+                    "widthPx": 488,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-31",
+                      "type": "text",
+                      "x": 0,
+                      "y": 16,
+                      "zIndex": 3,
+                      "text": "「美しさ」と「心地よさ」の両立を大切にしています。忙しい日常から離れ、香りと音楽に包まれた空間で、自分へのご褒美時間をどうぞ。スタッフ全員が国家資格を保有し、最新トレンドと確かな技術でお迎えします。",
+                      "style": {
+                        "color": "#4a3f4d",
+                        "fontWeight": "400",
+                        "fontFamily": "sans-serif",
+                        "textAlign": "left",
+                        "fontSize": "17px",
+                        "width": "488px",
+                        "heightPx": 0,
+                        "lineHeight": 1.65
+                      }
+                    },
+                    {
+                      "id": "blk-32",
+                      "type": "text",
+                      "x": 0,
+                      "y": 154,
+                      "zIndex": 3,
+                      "text": "完全予約制・個室ブース完備。お子様連れの方、男性のお客様も安心してご利用いただけます。",
+                      "style": {
+                        "color": "#5c4d5f",
+                        "fontWeight": "400",
+                        "fontFamily": "sans-serif",
+                        "textAlign": "left",
+                        "fontSize": "16px",
+                        "width": "488px",
+                        "heightPx": 0,
+                        "lineHeight": 1.55
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blk-33",
+          "type": "container",
+          "x": 0,
+          "y": 2774,
+          "zIndex": 4,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "340px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 340,
+            "paddingPx": 20,
+            "backgroundColor": "#eeb4c3",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-34",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 1,
+              "text": "RESERVATION",
+              "style": {
+                "color": "#6b5060",
+                "fontWeight": "600",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "12px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.4em",
+                "textTransform": "uppercase"
+              }
+            },
+            {
+              "id": "blk-35",
+              "type": "text",
+              "x": 0,
+              "y": 84,
+              "zIndex": 1,
+              "text": "まずは無料カウンセリングから。あなたに合うスタイルを一緒に見つけましょう。",
+              "style": {
+                "color": "#3d2438",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "20px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-36",
+              "type": "text",
+              "x": 0,
+              "y": 132,
+              "zIndex": 1,
+              "text": "Book your moment",
+              "style": {
+                "color": "#7a6575",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-37",
+              "type": "button",
+              "x": 0,
+              "y": 150,
+              "zIndex": 2,
+              "label": "カウンセリングを予約",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#ff6b35",
+                "backgroundColorSolid": "#ff6b35",
+                "paddingVerticalPx": 16,
+                "paddingHorizontalPx": 48,
+                "borderWidthPx": 0,
+                "borderColor": "#1e293b",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "center",
+                "fontSize": "17px",
+                "width": "400px",
+                "heightPx": 0,
+                "borderRadius": "999px",
+                "lineHeight": 1.45
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-38",
+          "type": "container",
+          "x": 0,
+          "y": 3040,
+          "zIndex": 5,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "160px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 160,
+            "paddingPx": 20,
+            "backgroundColor": "#2d2438",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-39",
+              "type": "text",
+              "x": 0,
+              "y": 41,
+              "zIndex": 1,
+              "text": "Lumière Beauty Salon",
+              "style": {
+                "color": "#d8c8d4",
+                "fontWeight": "400",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "15px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.12em"
+              }
+            },
+            {
+              "id": "blk-40",
+              "type": "text",
+              "x": 0,
+              "y": 41,
+              "zIndex": 1,
+              "text": "© 2026  東京都〇〇区〇〇 1-2-3 ／ 11:00–20:00（不定休）",
+              "style": {
+                "color": "#e8e0ea",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

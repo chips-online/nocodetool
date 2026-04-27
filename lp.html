@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>公開ページ — LP</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=20260416k" />
+  <link rel="stylesheet" href="lp-frame.css?v=20260416d" />
+</head>
+<body class="lp-outer">
+  <header class="lp-outer-bar">
+    <a href="admin.html" class="lp-outer-link">← ページ管理</a>
+    <span class="lp-outer-title" id="lp-outer-title"></span>
+    <a href="index.html" class="lp-outer-link lp-outer-link--right">エディタ</a>
+  </header>
+  <main class="lp-outer-main">
+    <iframe
+      id="lp-iframe"
+      class="lp-iframe"
+      title="ランディングページ"
+      sandbox="allow-scripts allow-same-origin allow-popups"
+    ></iframe>
+    <p class="lp-outer-error" id="lp-error" hidden>ページが見つかりません。ID を確認するか、管理画面で作成してください。</p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js?v=20260425a"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get("id");
+      var iframe = document.getElementById("lp-iframe");
+      var err = document.getElementById("lp-error");
+      var titleEl = document.getElementById("lp-outer-title");
+      var REGISTRY_KEY = "lp_pages_registry_v1";
+      var FALLBACK_TITLE = "公開LP";
+
+      function showError(message) {
+        err.hidden = false;
+        err.textContent = message;
+        if (iframe) iframe.style.display = "none";
+      }
+
+      function upsertLocalRegistry(pageId, doc, title) {
+        try {
+          var raw = localStorage.getItem(REGISTRY_KEY);
+          var reg = raw ? JSON.parse(raw) : { pages: [] };
+          if (!reg || !Array.isArray(reg.pages)) reg = { pages: [] };
+          var idx = -1;
+          for (var i = 0; i < reg.pages.length; i++) {
+            if (reg.pages[i] && reg.pages[i].id === pageId) {
+              idx = i;
+              break;
+            }
+          }
+          var entry = {
+            id: pageId,
+            title: title || FALLBACK_TITLE,
+            updatedAt: Date.now(),
+            document: doc,
+          };
+          if (idx >= 0) reg.pages[idx] = entry;
+          else reg.pages.push(entry);
+          localStorage.setItem(REGISTRY_KEY, JSON.stringify(reg));
+        } catch (e) {
+          throw new Error("ローカル準備に失敗しました。");
+        }
+      }
+
+      async function loadFromSupabase(pageId) {
+        if (!window.NoCodeSupabase || typeof window.NoCodeSupabase.getClient !== "function") {
+          throw new Error("Supabaseクライアントの初期化に失敗しました。");
+        }
+        var client = await window.NoCodeSupabase.getClient();
+        var result = await client.from("pages").select("id, content, created_at").eq("id", pageId).single();
+        if (result.error) {
+          if (String(result.error.code || "") === "PGRST116") {
+            throw new Error("ページが見つかりません。");
+          }
+          throw result.error;
+        }
+        if (!result.data || !result.data.content || typeof result.data.content !== "object") {
+          throw new Error("ページデータの形式が不正です。");
+        }
+        return result.data;
+      }
+
+      if (!id) {
+        showError("公開するページを指定してください（URL に ?id= ）。");
+        return;
+      }
+
+      loadFromSupabase(id)
+        .then(function (row) {
+          var title = "LP: " + String(row.id).slice(0, 8);
+          upsertLocalRegistry(id, row.content, title);
+          if (titleEl) titleEl.textContent = title;
+          iframe.src = "index.html?published=1&page=" + encodeURIComponent(id);
+        })
+        .catch(function (e) {
+          var msg = e && e.message ? String(e.message) : "ページの取得に失敗しました。";
+          if (msg.indexOf("見つかりません") !== -1) {
+            showError("ページが見つかりません。ID を確認してください。");
+            return;
+          }
+          showError("取得エラー: " + msg);
+        });
+    })();
+  </script>
+</body>
+</html>

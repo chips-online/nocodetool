@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ページ管理 — LP 作成キット</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <h1 class="admin-title">ページ管理</h1>
+        <p class="admin-lead">
+          ブラウザに保存した LP を一覧します。エディタで「今すぐ保存」するとこの一覧と公開ページ（lp.html）に反映されます（同一ブラウザ・同一端末の localStorage のみ）。
+        </p>
+      </div>
+      <p class="admin-header-actions">
+        <a href="index.html" class="btn">エディタへ</a>
+      </p>
+    </header>
+
+    <section class="admin-toolbar">
+      <button type="button" class="btn btn-primary" id="admin-new-page">新しい LP を作成</button>
+      <button type="button" class="btn" id="admin-migrate" title="旧バージョンの単一保存データを1件として取り込みます">
+        旧データを取り込む
+      </button>
+    </section>
+
+    <p class="admin-hint" id="admin-empty" hidden>まだページがありません。「新しい LP を作成」するか、エディタで編集して「今すぐ保存」するとここに表示されます。</p>
+
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="admin-table" hidden>
+        <thead>
+          <tr>
+            <th scope="col">タイトル</th>
+            <th scope="col">更新</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody id="admin-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="block-document-schema.js"></script>
+  <script src="pages-storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

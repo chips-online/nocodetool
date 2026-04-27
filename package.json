@@ -1,0 +1,14 @@
+{
+  "name": "nocodetool",
+  "private": true,
+  "description": "簡易ノーコードLP — 静的配信 + テンプレート保存 API",
+  "scripts": {
+    "start": "node server.js",
+    "verify:generate": "node scripts/verify-generate-api.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "openai": "^4.73.0"
+  }
+}

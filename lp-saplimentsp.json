@@ -1,0 +1,2345 @@
+{
+  "version": 1,
+  "schemaVersion": 2,
+  "layoutMode": "dualViewport",
+  "editingViewport": "responsive",
+  "activeTemplateKey": "productSalesStory",
+  "viewports": {
+    "desktop": {
+      "canvas": {
+        "widthPx": 1200,
+        "floorHeightPx": 5340,
+        "backgroundColor": "#FCFEF9",
+        "backgroundImageSrc": "",
+        "backgroundImageFit": "cover"
+      },
+      "blocks": [
+        {
+          "id": "blk-1",
+          "type": "container",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "820px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 820,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-2",
+              "type": "image",
+              "x": 620,
+              "y": 70,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=82",
+              "width": "500px",
+              "height": "620px"
+            },
+            {
+              "id": "blk-3",
+              "type": "text",
+              "x": 80,
+              "y": 120,
+              "zIndex": 2,
+              "text": "NATURAL INNER CARE",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "16px",
+                "width": "480px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.22em"
+              }
+            },
+            {
+              "id": "blk-4",
+              "type": "text",
+              "x": 80,
+              "y": 166,
+              "zIndex": 2,
+              "text": "Glow From Within",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "left",
+                "fontSize": "46px",
+                "width": "500px",
+                "heightPx": 0,
+                "lineHeight": 1.2
+              }
+            },
+            {
+              "id": "blk-5",
+              "type": "text",
+              "x": 80,
+              "y": 248,
+              "zIndex": 2,
+              "text": "内側から輝く、毎日のナチュラルケア。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "left",
+                "fontSize": "32px",
+                "width": "500px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-6",
+              "type": "text",
+              "x": 80,
+              "y": 360,
+              "zIndex": 2,
+              "text": "肌ケア・疲労対策・ボディメイクを1日2粒でサポート。20代後半〜40代女性の“なんとなく不調”に寄り添う美容健康サプリです。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "17px",
+                "width": "500px",
+                "heightPx": 0,
+                "lineHeight": 1.75
+              }
+            },
+            {
+              "id": "blk-7",
+              "type": "button",
+              "x": 80,
+              "y": 560,
+              "zIndex": 3,
+              "label": "Try Now / 今すぐ試す",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#82cc00",
+                "backgroundColorSolid": "#82cc00",
+                "paddingVerticalPx": 14,
+                "paddingHorizontalPx": 24,
+                "borderWidthPx": 0,
+                "borderColor": "#283b51",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "left",
+                "fontSize": "17px",
+                "width": "360px",
+                "height": "60px",
+                "borderRadius": "999px",
+                "lineHeight": 1.3
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-8",
+          "type": "container",
+          "x": 0,
+          "y": 820,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "680px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 680,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#eaf5d2",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-9",
+              "type": "text",
+              "x": 80,
+              "y": 80,
+              "zIndex": 1,
+              "text": "PROBLEM",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1040px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-10",
+              "type": "image",
+              "x": 90,
+              "y": 220,
+              "zIndex": 1,
+              "src": "https://images.pexels.com/photos/3812745/pexels-photo-3812745.jpeg",
+              "width": "470px",
+              "height": "330px"
+            },
+            {
+              "id": "blk-11",
+              "type": "text",
+              "x": 120,
+              "y": 128,
+              "zIndex": 2,
+              "text": "こんなお悩み、ありませんか？",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "36px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-12",
+              "type": "text",
+              "x": 600,
+              "y": 230,
+              "zIndex": 2,
+              "text": "・朝起きても疲れが抜けない\n・肌の乾燥やくすみが気になる\n・食事が乱れて栄養不足を感じる\n\n忙しい毎日ほど、体の内側のケアが後回しになりがちです。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "18px",
+                "width": "510px",
+                "heightPx": 0,
+                "lineHeight": 1.9
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-13",
+          "type": "container",
+          "x": 0,
+          "y": 1500,
+          "zIndex": 3,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "680px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 680,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-14",
+              "type": "text",
+              "x": 80,
+              "y": 80,
+              "zIndex": 1,
+              "text": "SOLUTION",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1040px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-15",
+              "type": "image",
+              "x": 640,
+              "y": 220,
+              "zIndex": 1,
+              "src": "https://images.pexels.com/photos/9064740/pexels-photo-9064740.jpeg",
+              "width": "470px",
+              "height": "330px"
+            },
+            {
+              "id": "blk-16",
+              "type": "text",
+              "x": 120,
+              "y": 128,
+              "zIndex": 2,
+              "text": "不足しがちな栄養を、毎日手軽に補給",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "34px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-17",
+              "type": "text",
+              "x": 90,
+              "y": 230,
+              "zIndex": 2,
+              "text": "ビタミン・ミネラル・コラーゲンをバランス配合。1日2粒で、肌・コンディション・代謝ケアをシンプルに続けられます。\n\n毎日続けるほど、肌のうるおい・朝の軽さ・前向きな気分を実感できます。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "18px",
+                "width": "510px",
+                "heightPx": 0,
+                "lineHeight": 1.85
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-18",
+          "type": "container",
+          "x": 0,
+          "y": 2140,
+          "zIndex": 4,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "820px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 820,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#eaf5d2",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-19",
+              "type": "text",
+              "x": 80,
+              "y": 80,
+              "zIndex": 1,
+              "text": "FEATURE",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1040px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-20",
+              "type": "image",
+              "x": 80,
+              "y": 240,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=82",
+              "width": "320px",
+              "height": "220px"
+            },
+            {
+              "id": "blk-21",
+              "type": "image",
+              "x": 440,
+              "y": 240,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=82",
+              "width": "320px",
+              "height": "220px"
+            },
+            {
+              "id": "blk-22",
+              "type": "image",
+              "x": 800,
+              "y": 240,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=900&q=82",
+              "width": "320px",
+              "height": "220px"
+            },
+            {
+              "id": "blk-23",
+              "type": "text",
+              "x": 120,
+              "y": 128,
+              "zIndex": 2,
+              "text": "選ばれる3つの特徴",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "34px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-24",
+              "type": "text",
+              "x": 80,
+              "y": 482,
+              "zIndex": 2,
+              "text": "成分設計",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "left",
+                "fontSize": "30px",
+                "width": "320px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-25",
+              "type": "text",
+              "x": 440,
+              "y": 482,
+              "zIndex": 2,
+              "text": "安全性",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "left",
+                "fontSize": "30px",
+                "width": "320px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-26",
+              "type": "text",
+              "x": 800,
+              "y": 482,
+              "zIndex": 2,
+              "text": "継続しやすさ",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "left",
+                "fontSize": "30px",
+                "width": "320px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-27",
+              "type": "text",
+              "x": 80,
+              "y": 544,
+              "zIndex": 2,
+              "text": "ビタミンC・B群、コラーゲン、乳酸菌を配合し、毎日の美容と健康を多角的に支えます。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "16px",
+                "width": "320px",
+                "heightPx": 0,
+                "lineHeight": 1.7
+              }
+            },
+            {
+              "id": "blk-28",
+              "type": "text",
+              "x": 440,
+              "y": 544,
+              "zIndex": 2,
+              "text": "国内GMP準拠工場で製造。不要な添加物を抑え、毎日安心して続けられる品質です。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "16px",
+                "width": "320px",
+                "heightPx": 0,
+                "lineHeight": 1.7
+              }
+            },
+            {
+              "id": "blk-29",
+              "type": "text",
+              "x": 800,
+              "y": 544,
+              "zIndex": 2,
+              "text": "1日2粒のシンプル設計。忙しい朝や外出先でも、水と一緒に手軽に摂取できます。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "16px",
+                "width": "320px",
+                "heightPx": 0,
+                "lineHeight": 1.7
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-30",
+          "type": "container",
+          "x": 0,
+          "y": 2960,
+          "zIndex": 5,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "560px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 560,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-31",
+              "type": "text",
+              "x": 80,
+              "y": 80,
+              "zIndex": 1,
+              "text": "BENEFIT",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1040px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-32",
+              "type": "text",
+              "x": 120,
+              "y": 128,
+              "zIndex": 2,
+              "text": "変化を実感できる毎日へ",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "34px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-33",
+              "type": "text",
+              "x": 140,
+              "y": 226,
+              "zIndex": 2,
+              "text": "朝の目覚めが軽くなり、日中の集中力が続く。\n肌のうるおいとハリを感じ、鏡を見る時間が前向きになる。\n“なんとなく不調”から抜け出し、自信を持てるコンディションへ。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "19px",
+                "width": "920px",
+                "heightPx": 0,
+                "lineHeight": 1.9
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-34",
+          "type": "container",
+          "x": 0,
+          "y": 3520,
+          "zIndex": 6,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "660px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 660,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#eaf5d2",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-35",
+              "type": "text",
+              "x": 80,
+              "y": 80,
+              "zIndex": 1,
+              "text": "LIFESTYLE",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1040px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-36",
+              "type": "image",
+              "x": 80,
+              "y": 240,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=82",
+              "width": "330px",
+              "height": "260px"
+            },
+            {
+              "id": "blk-37",
+              "type": "image",
+              "x": 435,
+              "y": 240,
+              "zIndex": 1,
+              "src": "https://images.pexels.com/photos/8990463/pexels-photo-8990463.jpeg",
+              "width": "330px",
+              "height": "260px"
+            },
+            {
+              "id": "blk-38",
+              "type": "image",
+              "x": 790,
+              "y": 240,
+              "zIndex": 1,
+              "src": "https://images.pexels.com/photos/6941126/pexels-photo-6941126.jpeg",
+              "width": "330px",
+              "height": "260px"
+            },
+            {
+              "id": "blk-39",
+              "type": "text",
+              "x": 120,
+              "y": 128,
+              "zIndex": 2,
+              "text": "日常の変化",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "34px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-40",
+              "type": "text",
+              "x": 80,
+              "y": 522,
+              "zIndex": 2,
+              "text": "生活の質の向上",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "24px",
+                "width": "330px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-41",
+              "type": "text",
+              "x": 435,
+              "y": 522,
+              "zIndex": 2,
+              "text": "肌質の改善",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "24px",
+                "width": "330px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            },
+            {
+              "id": "blk-42",
+              "type": "text",
+              "x": 790,
+              "y": 522,
+              "zIndex": 2,
+              "text": "睡眠の質の向上",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "24px",
+                "width": "330px",
+                "heightPx": 0,
+                "lineHeight": 1.4
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-43",
+          "type": "container",
+          "x": 0,
+          "y": 4180,
+          "zIndex": 7,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "560px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 560,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-44",
+              "type": "text",
+              "x": 80,
+              "y": 80,
+              "zIndex": 1,
+              "text": "REVIEW",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1040px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-45",
+              "type": "text",
+              "x": 120,
+              "y": 128,
+              "zIndex": 2,
+              "text": "お客様の声",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "34px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-46",
+              "type": "text",
+              "x": 120,
+              "y": 216,
+              "zIndex": 2,
+              "text": "「2週間ほどで朝のだるさが軽くなりました。仕事の日も気持ちよくスタートできます。」\n— 34歳 / 会社員",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "17px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.8
+              }
+            },
+            {
+              "id": "blk-47",
+              "type": "text",
+              "x": 120,
+              "y": 314,
+              "zIndex": 2,
+              "text": "「乾燥しやすい季節でも肌の調子が安定。ファンデのノリが変わって驚きました。」\n— 29歳 / 事務職",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "17px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.8
+              }
+            },
+            {
+              "id": "blk-48",
+              "type": "text",
+              "x": 120,
+              "y": 412,
+              "zIndex": 2,
+              "text": "「小粒で飲みやすく、無理なく続けられるのが嬉しい。体調管理の定番になりました。」\n— 41歳 / パート",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "17px",
+                "width": "960px",
+                "heightPx": 0,
+                "lineHeight": 1.8
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-49",
+          "type": "container",
+          "x": 0,
+          "y": 4740,
+          "zIndex": 8,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "420px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 420,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#283b51",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-50",
+              "type": "text",
+              "x": 80,
+              "y": 90,
+              "zIndex": 1,
+              "text": "LIMITED OFFER",
+              "style": {
+                "color": "#eaf5d2",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1040px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.24em"
+              }
+            },
+            {
+              "id": "blk-51",
+              "type": "text",
+              "x": 140,
+              "y": 138,
+              "zIndex": 2,
+              "text": "まずは30日、内側からの変化を体感してください。",
+              "style": {
+                "color": "#fcfef9",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "36px",
+                "width": "920px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-52",
+              "type": "button",
+              "x": 390,
+              "y": 250,
+              "zIndex": 3,
+              "label": "Start Now / 今すぐ始める",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#82cc00",
+                "backgroundColorSolid": "#82cc00",
+                "paddingVerticalPx": 14,
+                "paddingHorizontalPx": 24,
+                "borderWidthPx": 0,
+                "borderColor": "#81a76a",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "left",
+                "fontSize": "17px",
+                "width": "420px",
+                "height": "60px",
+                "borderRadius": "999px",
+                "lineHeight": 1.3
+              }
+            }
+          ]
+        },
+        {
+          "id": "blk-53",
+          "type": "container",
+          "x": 0,
+          "y": 5160,
+          "zIndex": 9,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "180px",
+            "width": "1200px",
+            "height": "",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 180,
+            "widthPx": 1200,
+            "heightPx": 0,
+            "paddingPx": 0,
+            "backgroundColor": "#283b51",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-54",
+              "type": "text",
+              "x": 80,
+              "y": 56,
+              "zIndex": 1,
+              "text": "Natural Inner Care Supplement",
+              "style": {
+                "color": "#fcfef9",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "left",
+                "fontSize": "28px",
+                "width": "700px",
+                "heightPx": 0,
+                "lineHeight": 1.3
+              }
+            },
+            {
+              "id": "blk-55",
+              "type": "text",
+              "x": 80,
+              "y": 108,
+              "zIndex": 1,
+              "text": "特定商取引法に基づく表記 / プライバシーポリシー / お問い合わせ",
+              "style": {
+                "color": "#eaf5d2",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "left",
+                "fontSize": "14px",
+                "width": "760px",
+                "heightPx": 0,
+                "lineHeight": 1.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "responsive": {
+      "canvas": {
+        "widthPx": 400,
+        "floorHeightPx": 400,
+        "backgroundColor": "#FCFEF9",
+        "backgroundImageSrc": "",
+        "backgroundImageFit": "cover"
+      },
+      "blocks": [
+        {
+          "id": "sup-hero",
+          "type": "container",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "1040px",
+            "padding": "0px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 1040,
+            "paddingPx": 0,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "sup-hero-img",
+              "type": "image",
+              "x": 0,
+              "y": 0,
+              "zIndex": 1,
+              "src": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1600&q=82",
+              "width": "1200px",
+              "heightPx": 0
+            },
+            {
+              "id": "blk-1",
+              "type": "text",
+              "x": 0,
+              "y": 500,
+              "zIndex": 2,
+              "text": "NATURAL INNER CARE",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "15px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.22em"
+              }
+            },
+            {
+              "id": "blk-2",
+              "type": "text",
+              "x": 0,
+              "y": 540,
+              "zIndex": 2,
+              "text": "Glow From Within",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "40px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.2
+              }
+            },
+            {
+              "id": "blk-3",
+              "type": "text",
+              "x": 0,
+              "y": 563,
+              "zIndex": 2,
+              "text": "内側から輝く、毎日のナチュラルケア。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "28px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-4",
+              "type": "text",
+              "x": 0,
+              "y": 550,
+              "zIndex": 2,
+              "text": "肌ケア・疲労対策・ボディメイクを1日2粒でサポート。20代後半〜40代女性の“なんとなく不調”に寄り添う美容健康サプリです。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "17px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.75
+              }
+            },
+            {
+              "id": "blk-5",
+              "type": "button",
+              "x": 0,
+              "y": 591,
+              "zIndex": 3,
+              "label": "Try Now / 今すぐ試す",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#82cc00",
+                "backgroundColorSolid": "#82cc00",
+                "paddingVerticalPx": 14,
+                "paddingHorizontalPx": 24,
+                "borderWidthPx": 0,
+                "borderColor": "#283b51",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "center",
+                "fontSize": "17px",
+                "width": "320px",
+                "height": "56px",
+                "borderRadius": "999px",
+                "lineHeight": 1.3
+              }
+            }
+          ]
+        },
+        {
+          "id": "sup-problem",
+          "type": "container",
+          "x": 0,
+          "y": 693,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "920px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 920,
+            "paddingPx": 20,
+            "backgroundColor": "#eaf5d2",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-6",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 2,
+              "text": "PROBLEM",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-7",
+              "type": "text",
+              "x": 0,
+              "y": 96,
+              "zIndex": 2,
+              "text": "こんなお悩み、ありませんか？",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "sup-prob-pair",
+              "type": "container",
+              "x": 0,
+              "y": 149,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "1056px",
+                "minHeight": "400px",
+                "width": "1056px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 1056,
+                "minHeightPx": 400,
+                "widthPx": 1056,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "sup-prob-imgbox",
+                  "type": "container",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "style": {
+                    "minWidth": "520px",
+                    "minHeight": "330px",
+                    "width": "520px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 520,
+                    "minHeightPx": 330,
+                    "widthPx": 520,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-8",
+                      "type": "image",
+                      "x": 0,
+                      "y": 0,
+                      "zIndex": 1,
+                      "src": "https://images.pexels.com/photos/3812745/pexels-photo-3812745.jpeg",
+                      "width": "520px",
+                      "height": "330px"
+                    }
+                  ]
+                },
+                {
+                  "id": "sup-prob-txtbox",
+                  "type": "container",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "style": {
+                    "minWidth": "488px",
+                    "minHeight": "200px",
+                    "width": "488px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 488,
+                    "minHeightPx": 200,
+                    "widthPx": 488,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-9",
+                      "type": "text",
+                      "x": 0,
+                      "y": 0,
+                      "zIndex": 2,
+                      "text": "・朝起きても疲れが抜けない\n・肌の乾燥やくすみが気になる\n・食事が乱れて栄養不足を感じる\n\n忙しい毎日ほど、体の内側のケアが後回しになりがちです。",
+                      "style": {
+                        "color": "#283b51",
+                        "fontWeight": "400",
+                        "fontFamily": "sans-serif",
+                        "textAlign": "center",
+                        "fontSize": "18px",
+                        "width": "488px",
+                        "heightPx": 0,
+                        "lineHeight": 1.9
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sup-solution",
+          "type": "container",
+          "x": 0,
+          "y": 1351,
+          "zIndex": 3,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "900px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 900,
+            "paddingPx": 20,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-10",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 2,
+              "text": "SOLUTION",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-11",
+              "type": "text",
+              "x": 0,
+              "y": 96,
+              "zIndex": 2,
+              "text": "不足しがちな栄養を、毎日手軽に補給",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "sup-sol-pair",
+              "type": "container",
+              "x": 0,
+              "y": 148,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "1056px",
+                "minHeight": "400px",
+                "width": "1056px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 1056,
+                "minHeightPx": 400,
+                "widthPx": 1056,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "sup-sol-imgbox",
+                  "type": "container",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "style": {
+                    "minWidth": "520px",
+                    "minHeight": "330px",
+                    "width": "520px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 520,
+                    "minHeightPx": 330,
+                    "widthPx": 520,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-12",
+                      "type": "image",
+                      "x": 0,
+                      "y": 0,
+                      "zIndex": 1,
+                      "src": "https://images.pexels.com/photos/9064740/pexels-photo-9064740.jpeg",
+                      "width": "358px",
+                      "height": "236px"
+                    }
+                  ]
+                },
+                {
+                  "id": "sup-sol-txtbox",
+                  "type": "container",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 2,
+                  "style": {
+                    "minWidth": "520px",
+                    "minHeight": "200px",
+                    "width": "520px",
+                    "height": "",
+                    "padding": "0px",
+                    "borderRadius": "0px",
+                    "minWidthPx": 520,
+                    "minHeightPx": 200,
+                    "widthPx": 520,
+                    "heightPx": 0,
+                    "paddingPx": 0,
+                    "backgroundColor": "",
+                    "backgroundAlphaPct": 100,
+                    "borderRadiusPx": 0
+                  },
+                  "children": [
+                    {
+                      "id": "blk-13",
+                      "type": "text",
+                      "x": 0,
+                      "y": 0,
+                      "zIndex": 2,
+                      "text": "ビタミン・ミネラル・コラーゲンをバランス配合。1日2粒で、肌・コンディション・代謝ケアをシンプルに続けられます。\n\n毎日続けるほど、肌のうるおい・朝の軽さ・前向きな気分を実感できます。",
+                      "style": {
+                        "color": "#283b51",
+                        "fontWeight": "400",
+                        "fontFamily": "sans-serif",
+                        "textAlign": "center",
+                        "fontSize": "18px",
+                        "width": "520px",
+                        "heightPx": 0,
+                        "lineHeight": 1.85
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sup-feature",
+          "type": "container",
+          "x": 0,
+          "y": 2016,
+          "zIndex": 4,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "1680px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 1680,
+            "paddingPx": 20,
+            "backgroundColor": "#eaf5d2",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-14",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 2,
+              "text": "FEATURE",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-15",
+              "type": "text",
+              "x": 0,
+              "y": 96,
+              "zIndex": 2,
+              "text": "選ばれる3つの特徴",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "sup-feat-a",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "360px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 360,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-16",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "src": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=82",
+                  "width": "360px",
+                  "height": "236px"
+                },
+                {
+                  "id": "blk-17",
+                  "type": "text",
+                  "x": 0,
+                  "y": 236,
+                  "zIndex": 2,
+                  "text": "成分設計",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.35
+                  }
+                },
+                {
+                  "id": "blk-18",
+                  "type": "text",
+                  "x": 0,
+                  "y": 288,
+                  "zIndex": 2,
+                  "text": "ビタミンC・B群、コラーゲン、乳酸菌を配合し、毎日の美容と健康を多角的に支えます。",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "16px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.7
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sup-feat-b",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "360px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 360,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-19",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "src": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=82",
+                  "width": "360px",
+                  "height": "237px"
+                },
+                {
+                  "id": "blk-20",
+                  "type": "text",
+                  "x": 0,
+                  "y": 236,
+                  "zIndex": 2,
+                  "text": "安全性",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.35
+                  }
+                },
+                {
+                  "id": "blk-21",
+                  "type": "text",
+                  "x": 0,
+                  "y": 288,
+                  "zIndex": 2,
+                  "text": "国内GMP準拠工場で製造。不要な添加物を抑え、毎日安心して続けられる品質です。",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "16px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.7
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sup-feat-c",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "360px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 360,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-22",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "src": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=900&q=82",
+                  "width": "357px",
+                  "height": "201px"
+                },
+                {
+                  "id": "blk-23",
+                  "type": "text",
+                  "x": 0,
+                  "y": 236,
+                  "zIndex": 2,
+                  "text": "継続しやすさ",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "28px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.35
+                  }
+                },
+                {
+                  "id": "blk-24",
+                  "type": "text",
+                  "x": 0,
+                  "y": 270,
+                  "zIndex": 2,
+                  "text": "1日2粒のシンプル設計。忙しい朝や外出先でも、水と一緒に手軽に摂取できます。",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "400",
+                    "fontFamily": "sans-serif",
+                    "textAlign": "center",
+                    "fontSize": "16px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.7
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sup-benefit",
+          "type": "container",
+          "x": 0,
+          "y": 3257,
+          "zIndex": 5,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "480px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 480,
+            "paddingPx": 20,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-25",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 2,
+              "text": "BENEFIT",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-26",
+              "type": "text",
+              "x": 0,
+              "y": 96,
+              "zIndex": 2,
+              "text": "変化を実感できる毎日へ",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-27",
+              "type": "text",
+              "x": 0,
+              "y": 106,
+              "zIndex": 2,
+              "text": "朝の目覚めが軽くなり、日中の集中力が続く。\n肌のうるおいとハリを感じ、鏡を見る時間が前向きになる。\n“なんとなく不調”から抜け出し、自信を持てるコンディションへ。",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "19px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.9
+              }
+            }
+          ]
+        },
+        {
+          "id": "sup-lifestyle",
+          "type": "container",
+          "x": 0,
+          "y": 3687,
+          "zIndex": 6,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "900px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 900,
+            "paddingPx": 20,
+            "backgroundColor": "#eaf5d2",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-28",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 2,
+              "text": "LIFESTYLE",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-29",
+              "type": "text",
+              "x": 0,
+              "y": 96,
+              "zIndex": 2,
+              "text": "日常の変化",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "sup-life-a",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "360px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 360,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-30",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "src": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=82",
+                  "width": "359px",
+                  "height": "237px"
+                },
+                {
+                  "id": "blk-31",
+                  "type": "text",
+                  "x": 0,
+                  "y": 250,
+                  "zIndex": 2,
+                  "text": "生活の質の向上",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "24px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.4
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sup-life-b",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "360px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 360,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-32",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "src": "https://images.pexels.com/photos/8990463/pexels-photo-8990463.jpeg",
+                  "width": "360px",
+                  "height": "535px"
+                },
+                {
+                  "id": "blk-33",
+                  "type": "text",
+                  "x": 0,
+                  "y": 252,
+                  "zIndex": 2,
+                  "text": "肌質の改善",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "24px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.4
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sup-life-c",
+              "type": "container",
+              "x": 0,
+              "y": 188,
+              "zIndex": 2,
+              "style": {
+                "minWidth": "352px",
+                "minHeight": "360px",
+                "width": "352px",
+                "height": "",
+                "padding": "0px",
+                "borderRadius": "0px",
+                "minWidthPx": 352,
+                "minHeightPx": 360,
+                "widthPx": 352,
+                "heightPx": 0,
+                "paddingPx": 0,
+                "backgroundColor": "",
+                "backgroundAlphaPct": 100,
+                "borderRadiusPx": 0
+              },
+              "children": [
+                {
+                  "id": "blk-34",
+                  "type": "image",
+                  "x": 0,
+                  "y": 0,
+                  "zIndex": 1,
+                  "src": "https://images.pexels.com/photos/6941126/pexels-photo-6941126.jpeg",
+                  "width": "357px",
+                  "height": "238px"
+                },
+                {
+                  "id": "blk-35",
+                  "type": "text",
+                  "x": 0,
+                  "y": 250,
+                  "zIndex": 2,
+                  "text": "睡眠の質の向上",
+                  "style": {
+                    "color": "#283b51",
+                    "fontWeight": "700",
+                    "fontFamily": "serif",
+                    "textAlign": "center",
+                    "fontSize": "24px",
+                    "width": "352px",
+                    "heightPx": 0,
+                    "lineHeight": 1.4
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sup-review",
+          "type": "container",
+          "x": 0,
+          "y": 5029,
+          "zIndex": 7,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "560px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 560,
+            "paddingPx": 20,
+            "backgroundColor": "#fcfef9",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-36",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 2,
+              "text": "REVIEW",
+              "style": {
+                "color": "#81a76a",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.2em"
+              }
+            },
+            {
+              "id": "blk-37",
+              "type": "text",
+              "x": 0,
+              "y": 96,
+              "zIndex": 2,
+              "text": "お客様の声",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "32px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-38",
+              "type": "text",
+              "x": 0,
+              "y": 176,
+              "zIndex": 2,
+              "text": "「2週間ほどで朝のだるさが軽くなりました。仕事の日も気持ちよくスタートできます。」\n— 34歳 / 会社員",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "17px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.8
+              }
+            },
+            {
+              "id": "blk-39",
+              "type": "text",
+              "x": 0,
+              "y": 300,
+              "zIndex": 2,
+              "text": "「乾燥しやすい季節でも肌の調子が安定。ファンデのノリが変わって驚きました。」\n— 29歳 / 事務職",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "17px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.8
+              }
+            },
+            {
+              "id": "blk-40",
+              "type": "text",
+              "x": 0,
+              "y": 329,
+              "zIndex": 2,
+              "text": "「小粒で飲みやすく、無理なく続けられるのが嬉しい。体調管理の定番になりました。」\n— 41歳 / パート",
+              "style": {
+                "color": "#283b51",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "17px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.8
+              }
+            }
+          ]
+        },
+        {
+          "id": "sup-cta",
+          "type": "container",
+          "x": 0,
+          "y": 5548,
+          "zIndex": 8,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "440px",
+            "padding": "23px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 440,
+            "paddingPx": 23,
+            "backgroundColor": "#283b51",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-41",
+              "type": "text",
+              "x": 0,
+              "y": 52,
+              "zIndex": 2,
+              "text": "LIMITED OFFER",
+              "style": {
+                "color": "#eaf5d2",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "16px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.4,
+                "letterSpacing": "0.24em"
+              }
+            },
+            {
+              "id": "blk-42",
+              "type": "text",
+              "x": 0,
+              "y": 96,
+              "zIndex": 2,
+              "text": "まずは30日、内側からの変化を体感してください。",
+              "style": {
+                "color": "#fcfef9",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "30px",
+                "width": "1000px",
+                "heightPx": 0,
+                "lineHeight": 1.35
+              }
+            },
+            {
+              "id": "blk-43",
+              "type": "button",
+              "x": 0,
+              "y": 143,
+              "zIndex": 3,
+              "label": "Start Now / 今すぐ始める",
+              "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#82cc00",
+                "backgroundColorSolid": "#82cc00",
+                "paddingVerticalPx": 14,
+                "paddingHorizontalPx": 24,
+                "borderWidthPx": 0,
+                "borderColor": "#81a76a",
+                "backgroundImageSrc": "",
+                "backgroundImageFit": "cover",
+                "fontWeight": "700",
+                "fontFamily": "sans-serif",
+                "blockAlign": "center",
+                "fontSize": "17px",
+                "width": "360px",
+                "height": "56px",
+                "borderRadius": "999px",
+                "lineHeight": 1.3
+              }
+            }
+          ]
+        },
+        {
+          "id": "sup-foot",
+          "type": "container",
+          "x": 0,
+          "y": 5832,
+          "zIndex": 9,
+          "style": {
+            "minWidth": "1200px",
+            "minHeight": "",
+            "width": "1200px",
+            "height": "200px",
+            "padding": "20px",
+            "borderRadius": "0px",
+            "minWidthPx": 1200,
+            "minHeightPx": 0,
+            "widthPx": 1200,
+            "heightPx": 200,
+            "paddingPx": 20,
+            "backgroundColor": "#283b51",
+            "backgroundAlphaPct": 100,
+            "borderRadiusPx": 0
+          },
+          "children": [
+            {
+              "id": "blk-44",
+              "type": "text",
+              "x": 0,
+              "y": 48,
+              "zIndex": 2,
+              "text": "Natural Inner Care Supplement",
+              "style": {
+                "color": "#fcfef9",
+                "fontWeight": "700",
+                "fontFamily": "serif",
+                "textAlign": "center",
+                "fontSize": "22px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.3
+              }
+            },
+            {
+              "id": "blk-45",
+              "type": "text",
+              "x": 0,
+              "y": 48,
+              "zIndex": 2,
+              "text": "特定商取引法に基づく表記 / プライバシーポリシー / お問い合わせ",
+              "style": {
+                "color": "#eaf5d2",
+                "fontWeight": "400",
+                "fontFamily": "sans-serif",
+                "textAlign": "center",
+                "fontSize": "14px",
+                "width": "1056px",
+                "heightPx": 0,
+                "lineHeight": 1.6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

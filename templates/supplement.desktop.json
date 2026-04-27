@@ -1,0 +1,895 @@
+{
+  "name": "サプリメント販売LP",
+  "canvas": {
+    "widthPx": 1200,
+    "floorHeightPx": 5340,
+    "backgroundColor": "#FCFEF9",
+    "backgroundImageSrc": "",
+    "backgroundImageFit": "cover"
+  },
+  "data": [
+    {
+      "type": "container",
+      "x": 0,
+      "y": 0,
+      "zIndex": 1,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 820,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#FCFEF9"
+      },
+      "children": [
+        {
+          "type": "image",
+          "x": 620,
+          "y": 70,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=82",
+          "widthPx": 500,
+          "heightPx": 620
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 120,
+          "zIndex": 2,
+          "text": "NATURAL INNER CARE",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#81A76A",
+            "fontWeight": "700",
+            "widthPx": 480,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.22em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 166,
+          "zIndex": 2,
+          "text": "Glow From Within",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 46,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 500,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.2
+          }
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 248,
+          "zIndex": 2,
+          "text": "内側から輝く、毎日のナチュラルケア。",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 32,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 500,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 360,
+          "zIndex": 2,
+          "text": "肌ケア・疲労対策・ボディメイクを1日2粒でサポート。20代後半〜40代女性の“なんとなく不調”に寄り添う美容健康サプリです。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 17,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 500,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.75
+          }
+        },
+        {
+          "type": "button",
+          "x": 80,
+          "y": 560,
+          "zIndex": 3,
+          "label": "Try Now / 今すぐ試す",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontWeight": "700",
+            "fontSizePx": 17,
+            "color": "#ffffff",
+            "backgroundColor": "#82CC00",
+            "backgroundColorSolid": "#82CC00",
+            "widthPx": 360,
+            "heightPx": 60,
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 24,
+            "borderRadiusPx": 999,
+            "borderWidthPx": 0,
+            "borderColor": "#283B51",
+            "lineHeight": 1.3
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 820,
+      "zIndex": 2,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 680,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#EAF5D2"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 80,
+          "zIndex": 1,
+          "text": "PROBLEM",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#81A76A",
+            "fontWeight": "700",
+            "widthPx": 1040,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 128,
+          "zIndex": 2,
+          "text": "こんなお悩み、ありませんか？",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 36,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "image",
+          "x": 90,
+          "y": 220,
+          "zIndex": 1,
+          "src": "https://images.pexels.com/photos/3812745/pexels-photo-3812745.jpeg",
+          "widthPx": 470,
+          "heightPx": 330
+        },
+        {
+          "type": "text",
+          "x": 600,
+          "y": 230,
+          "zIndex": 2,
+          "text": "・朝起きても疲れが抜けない\n・肌の乾燥やくすみが気になる\n・食事が乱れて栄養不足を感じる\n\n忙しい毎日ほど、体の内側のケアが後回しになりがちです。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 18,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 510,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.9
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 1500,
+      "zIndex": 3,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 680,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#FCFEF9"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 80,
+          "zIndex": 1,
+          "text": "SOLUTION",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#81A76A",
+            "fontWeight": "700",
+            "widthPx": 1040,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 128,
+          "zIndex": 2,
+          "text": "不足しがちな栄養を、毎日手軽に補給",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 34,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 90,
+          "y": 230,
+          "zIndex": 2,
+          "text": "ビタミン・ミネラル・コラーゲンをバランス配合。1日2粒で、肌・コンディション・代謝ケアをシンプルに続けられます。\n\n毎日続けるほど、肌のうるおい・朝の軽さ・前向きな気分を実感できます。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 18,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 510,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.85
+          }
+        },
+        {
+          "type": "image",
+          "x": 640,
+          "y": 220,
+          "zIndex": 1,
+          "src": "https://images.pexels.com/photos/9064740/pexels-photo-9064740.jpeg",
+          "widthPx": 470,
+          "heightPx": 330
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 2140,
+      "zIndex": 4,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 820,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#EAF5D2"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 80,
+          "zIndex": 1,
+          "text": "FEATURE",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#81A76A",
+            "fontWeight": "700",
+            "widthPx": 1040,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 128,
+          "zIndex": 2,
+          "text": "選ばれる3つの特徴",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 34,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "image",
+          "x": 80,
+          "y": 240,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=82",
+          "widthPx": 320,
+          "heightPx": 220
+        },
+        {
+          "type": "image",
+          "x": 440,
+          "y": 240,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=82",
+          "widthPx": 320,
+          "heightPx": 220
+        },
+        {
+          "type": "image",
+          "x": 800,
+          "y": 240,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=900&q=82",
+          "widthPx": 320,
+          "heightPx": 220
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 482,
+          "zIndex": 2,
+          "text": "成分設計",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 30,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 320,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 440,
+          "y": 482,
+          "zIndex": 2,
+          "text": "安全性",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 30,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 320,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 482,
+          "zIndex": 2,
+          "text": "継続しやすさ",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 30,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 320,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 544,
+          "zIndex": 2,
+          "text": "ビタミンC・B群、コラーゲン、乳酸菌を配合し、毎日の美容と健康を多角的に支えます。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 320,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.7
+          }
+        },
+        {
+          "type": "text",
+          "x": 440,
+          "y": 544,
+          "zIndex": 2,
+          "text": "国内GMP準拠工場で製造。不要な添加物を抑え、毎日安心して続けられる品質です。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 320,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.7
+          }
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 544,
+          "zIndex": 2,
+          "text": "1日2粒のシンプル設計。忙しい朝や外出先でも、水と一緒に手軽に摂取できます。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 320,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.7
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 2960,
+      "zIndex": 5,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 560,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#FCFEF9"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 80,
+          "zIndex": 1,
+          "text": "BENEFIT",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#81A76A",
+            "fontWeight": "700",
+            "widthPx": 1040,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 128,
+          "zIndex": 2,
+          "text": "変化を実感できる毎日へ",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 34,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 140,
+          "y": 226,
+          "zIndex": 2,
+          "text": "朝の目覚めが軽くなり、日中の集中力が続く。\n肌のうるおいとハリを感じ、鏡を見る時間が前向きになる。\n“なんとなく不調”から抜け出し、自信を持てるコンディションへ。",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 19,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 920,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.9
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 3520,
+      "zIndex": 6,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 660,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#EAF5D2"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 80,
+          "zIndex": 1,
+          "text": "LIFESTYLE",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#81A76A",
+            "fontWeight": "700",
+            "widthPx": 1040,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 128,
+          "zIndex": 2,
+          "text": "日常の変化",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 34,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "image",
+          "x": 80,
+          "y": 240,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=82",
+          "widthPx": 330,
+          "heightPx": 260
+        },
+        {
+          "type": "image",
+          "x": 435,
+          "y": 240,
+          "zIndex": 1,
+          "src": "https://images.pexels.com/photos/8990463/pexels-photo-8990463.jpeg",
+          "widthPx": 330,
+          "heightPx": 260
+        },
+        {
+          "type": "image",
+          "x": 790,
+          "y": 240,
+          "zIndex": 1,
+          "src": "https://images.pexels.com/photos/6941126/pexels-photo-6941126.jpeg",
+          "widthPx": 330,
+          "heightPx": 260
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 522,
+          "zIndex": 2,
+          "text": "生活の質の向上",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 24,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 330,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "type": "text",
+          "x": 435,
+          "y": 522,
+          "zIndex": 2,
+          "text": "肌質の改善",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 24,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 330,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4
+          }
+        },
+        {
+          "type": "text",
+          "x": 790,
+          "y": 522,
+          "zIndex": 2,
+          "text": "睡眠の質の向上",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 24,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 330,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 4180,
+      "zIndex": 7,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 560,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#FCFEF9"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 80,
+          "zIndex": 1,
+          "text": "REVIEW",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#81A76A",
+            "fontWeight": "700",
+            "widthPx": 1040,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 128,
+          "zIndex": 2,
+          "text": "お客様の声",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 34,
+            "color": "#283B51",
+            "fontWeight": "700",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 216,
+          "zIndex": 2,
+          "text": "「2週間ほどで朝のだるさが軽くなりました。仕事の日も気持ちよくスタートできます。」\n— 34歳 / 会社員",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 17,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.8
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 314,
+          "zIndex": 2,
+          "text": "「乾燥しやすい季節でも肌の調子が安定。ファンデのノリが変わって驚きました。」\n— 29歳 / 事務職",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 17,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.8
+          }
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 412,
+          "zIndex": 2,
+          "text": "「小粒で飲みやすく、無理なく続けられるのが嬉しい。体調管理の定番になりました。」\n— 41歳 / パート",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 17,
+            "color": "#283B51",
+            "fontWeight": "400",
+            "widthPx": 960,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 4740,
+      "zIndex": 8,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 420,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#283B51"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 90,
+          "zIndex": 1,
+          "text": "LIMITED OFFER",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 16,
+            "color": "#EAF5D2",
+            "fontWeight": "700",
+            "widthPx": 1040,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.24em"
+          }
+        },
+        {
+          "type": "text",
+          "x": 140,
+          "y": 138,
+          "zIndex": 2,
+          "text": "まずは30日、内側からの変化を体感してください。",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 36,
+            "color": "#FCFEF9",
+            "fontWeight": "700",
+            "widthPx": 920,
+            "heightPx": 0,
+            "textAlign": "center",
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "type": "button",
+          "x": 390,
+          "y": 250,
+          "zIndex": 3,
+          "label": "Start Now / 今すぐ始める",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontWeight": "700",
+            "fontSizePx": 17,
+            "color": "#ffffff",
+            "backgroundColor": "#82CC00",
+            "backgroundColorSolid": "#82CC00",
+            "widthPx": 420,
+            "heightPx": 60,
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 24,
+            "borderRadiusPx": 999,
+            "borderWidthPx": 0,
+            "borderColor": "#81A76A",
+            "lineHeight": 1.3
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "x": 0,
+      "y": 5160,
+      "zIndex": 9,
+      "style": {
+        "minWidthPx": 1200,
+        "minHeightPx": 180,
+        "widthPx": 1200,
+        "heightPx": 0,
+        "paddingPx": 0,
+        "borderRadiusPx": 0,
+        "backgroundColor": "#283B51"
+      },
+      "children": [
+        {
+          "type": "text",
+          "x": 80,
+          "y": 56,
+          "zIndex": 1,
+          "text": "Natural Inner Care Supplement",
+          "style": {
+            "fontFamily": "serif",
+            "fontSizePx": 28,
+            "color": "#FCFEF9",
+            "fontWeight": "700",
+            "widthPx": 700,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.3
+          }
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 108,
+          "zIndex": 1,
+          "text": "特定商取引法に基づく表記 / プライバシーポリシー / お問い合わせ",
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSizePx": 14,
+            "color": "#EAF5D2",
+            "fontWeight": "400",
+            "widthPx": 760,
+            "heightPx": 0,
+            "textAlign": "left",
+            "lineHeight": 1.6
+          }
+        }
+      ]
+    }
+  ]
+}

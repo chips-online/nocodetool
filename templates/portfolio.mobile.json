@@ -1,0 +1,546 @@
+{
+  "name": "ポートフォリオLP",
+  "canvas": {
+    "widthPx": 400,
+    "floorHeightPx": 3298,
+    "backgroundColor": "#ffffff",
+    "backgroundImageSrc": "",
+    "backgroundImageFit": "cover"
+  },
+  "data": [
+    {
+      "id": "blk-1",
+      "type": "container",
+      "x": 0,
+      "y": 0,
+      "zIndex": 1,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "540px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 540,
+        "paddingPx": 0,
+        "backgroundColor": "#111319",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "blk-2",
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=900&q=82",
+          "width": "408px",
+          "height": "553px"
+        },
+        {
+          "id": "blk-30",
+          "type": "container",
+          "x": 0,
+          "y": 266,
+          "zIndex": 2,
+          "style": {
+            "minWidth": "280px",
+            "minHeight": "160px",
+            "width": "414px",
+            "height": "243px",
+            "padding": "12px",
+            "borderRadius": "0px",
+            "minWidthPx": 280,
+            "minHeightPx": 160,
+            "widthPx": 414,
+            "heightPx": 243,
+            "paddingPx": 12,
+            "backgroundColor": "#3b384d",
+            "backgroundAlphaPct": 60,
+            "borderRadiusPx": 0
+          },
+          "children": []
+        },
+        {
+          "id": "blk-3",
+          "type": "text",
+          "x": 20,
+          "y": 300,
+          "zIndex": 3,
+          "text": "PORTFOLIO / CREATIVE WORKS",
+          "style": {
+            "color": "#d9dcea",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "11px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "id": "blk-4",
+          "type": "text",
+          "x": 20,
+          "y": 332,
+          "zIndex": 4,
+          "text": "Rina Aoyama",
+          "style": {
+            "color": "#ffffff",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "28px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.15
+          }
+        },
+        {
+          "id": "blk-5",
+          "type": "text",
+          "x": 20,
+          "y": 388,
+          "zIndex": 5,
+          "text": "UI/UX Designer & Frontend Creator",
+          "style": {
+            "color": "#f1f4ff",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "18px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.3
+          }
+        },
+        {
+          "id": "blk-6",
+          "type": "text",
+          "x": 20,
+          "y": 442,
+          "zIndex": 6,
+          "text": "日常の中にある課題を、体験設計とビジュアルで心地よく解決することを大切にしています。",
+          "style": {
+            "color": "#d5dbee",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "14px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.75
+          }
+        }
+      ]
+    },
+    {
+      "id": "blk-7",
+      "type": "container",
+      "x": 0,
+      "y": 540,
+      "zIndex": 2,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "560px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 560,
+        "paddingPx": 0,
+        "backgroundColor": "#ffffff",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "blk-8",
+          "type": "text",
+          "x": 20,
+          "y": 40,
+          "zIndex": 1,
+          "text": "PROFILE",
+          "style": {
+            "color": "#606b86",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "id": "blk-9",
+          "type": "text",
+          "x": 20,
+          "y": 72,
+          "zIndex": 1,
+          "text": "自己紹介",
+          "style": {
+            "color": "#1f2940",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "24px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "blk-10",
+          "type": "image",
+          "x": 80,
+          "y": 132,
+          "zIndex": 1,
+          "src": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=82",
+          "style": {
+            "borderRadiusPct": 30
+          },
+          "width": "200px",
+          "height": "200px"
+        },
+        {
+          "id": "blk-11",
+          "type": "text",
+          "x": 20,
+          "y": 348,
+          "zIndex": 1,
+          "text": "Webデザイン・UI設計・フロントエンド実装を軸に、ブランドの世界観を活かしたデジタル体験を制作しています。企画からデザイン、実装まで一貫して担当し、使いやすさと美しさの両立を目指します。",
+          "style": {
+            "color": "#3d4b67",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "15px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.75
+          }
+        }
+      ]
+    },
+    {
+      "id": "blk-12",
+      "type": "container",
+      "x": 0,
+      "y": 1100,
+      "zIndex": 3,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "1456px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 1456,
+        "paddingPx": 0,
+        "backgroundColor": "#f3f5f9",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "blk-13",
+          "type": "text",
+          "x": 20,
+          "y": 36,
+          "zIndex": 1,
+          "text": "WORKS",
+          "style": {
+            "color": "#606b86",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "id": "blk-14",
+          "type": "text",
+          "x": 20,
+          "y": 68,
+          "zIndex": 1,
+          "text": "作品一覧",
+          "style": {
+            "color": "#1f2940",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "24px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "blk-15",
+          "type": "image",
+          "x": 78,
+          "y": 124,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=82",
+          "width": "243px",
+          "height": "160px"
+        },
+        {
+          "id": "blk-16",
+          "type": "image",
+          "x": 78,
+          "y": 335,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=82",
+          "width": "360px",
+          "height": "200px"
+        },
+        {
+          "id": "blk-17",
+          "type": "image",
+          "x": 79,
+          "y": 545,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=82",
+          "width": "242px",
+          "height": "160px"
+        },
+        {
+          "id": "blk-18",
+          "type": "image",
+          "x": 78,
+          "y": 755,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=800&q=82",
+          "width": "360px",
+          "height": "200px"
+        },
+        {
+          "id": "blk-19",
+          "type": "image",
+          "x": 78,
+          "y": 944,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=82",
+          "width": "360px",
+          "height": "200px"
+        },
+        {
+          "id": "blk-20",
+          "type": "image",
+          "x": 80,
+          "y": 1154,
+          "zIndex": 2,
+          "src": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=82",
+          "width": "360px",
+          "height": "200px"
+        }
+      ]
+    },
+    {
+      "id": "blk-21",
+      "type": "container",
+      "x": 0,
+      "y": 2556,
+      "zIndex": 4,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "340px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 340,
+        "paddingPx": 0,
+        "backgroundColor": "#ffffff",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "blk-22",
+          "type": "text",
+          "x": 20,
+          "y": 36,
+          "zIndex": 1,
+          "text": "SKILLS",
+          "style": {
+            "color": "#606b86",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "12px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.22em"
+          }
+        },
+        {
+          "id": "blk-23",
+          "type": "text",
+          "x": 20,
+          "y": 68,
+          "zIndex": 1,
+          "text": "スキル",
+          "style": {
+            "color": "#1f2940",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "24px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "blk-24",
+          "type": "text",
+          "x": 20,
+          "y": 128,
+          "zIndex": 1,
+          "text": "UI/UX Design\nWeb Design\nHTML / CSS / JavaScript\nFigma / Adobe XD\nBranding Direction",
+          "style": {
+            "color": "#334466",
+            "fontWeight": "600",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "17px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.75
+          }
+        }
+      ]
+    },
+    {
+      "id": "blk-25",
+      "type": "container",
+      "x": 0,
+      "y": 2896,
+      "zIndex": 5,
+      "style": {
+        "minWidth": "400px",
+        "minHeight": "",
+        "width": "400px",
+        "height": "400px",
+        "padding": "0px",
+        "borderRadius": "0px",
+        "minWidthPx": 400,
+        "minHeightPx": 0,
+        "widthPx": 400,
+        "heightPx": 400,
+        "paddingPx": 0,
+        "backgroundColor": "#1b2233",
+        "backgroundAlphaPct": 100,
+        "borderRadiusPx": 0
+      },
+      "children": [
+        {
+          "id": "blk-26",
+          "type": "text",
+          "x": 20,
+          "y": 48,
+          "zIndex": 1,
+          "text": "LET'S WORK TOGETHER",
+          "style": {
+            "color": "#c8d4f5",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "11px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.4,
+            "letterSpacing": "0.2em"
+          }
+        },
+        {
+          "id": "blk-27",
+          "type": "text",
+          "x": 20,
+          "y": 84,
+          "zIndex": 1,
+          "text": "制作のご相談・お仕事のご依頼はこちら",
+          "style": {
+            "color": "#ffffff",
+            "fontWeight": "700",
+            "fontFamily": "serif",
+            "textAlign": "center",
+            "fontSize": "22px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.35
+          }
+        },
+        {
+          "id": "blk-28",
+          "type": "text",
+          "x": 20,
+          "y": 300,
+          "zIndex": 1,
+          "text": "Mail: hello@example.com / SNS: @rina_design",
+          "style": {
+            "color": "#c8d4f5",
+            "fontWeight": "400",
+            "fontFamily": "sans-serif",
+            "textAlign": "center",
+            "fontSize": "13px",
+            "width": "360px",
+            "heightPx": 0,
+            "lineHeight": 1.6
+          }
+        },
+        {
+          "id": "blk-29",
+          "type": "button",
+          "x": 20,
+          "y": 168,
+          "zIndex": 2,
+          "label": "お問い合わせする",
+          "style": {
+            "color": "#1b2233",
+            "backgroundColor": "#ffffff",
+            "backgroundColorSolid": "#ffffff",
+            "paddingVerticalPx": 14,
+            "paddingHorizontalPx": 28,
+            "borderWidthPx": 0,
+            "borderColor": "#ffffff",
+            "backgroundImageSrc": "",
+            "backgroundImageFit": "cover",
+            "fontWeight": "700",
+            "fontFamily": "sans-serif",
+            "blockAlign": "center",
+            "fontSize": "16px",
+            "width": "360px",
+            "heightPx": 0,
+            "borderRadius": "999px",
+            "lineHeight": 1.45
+          }
+        }
+      ]
+    }
+  ]
+}
